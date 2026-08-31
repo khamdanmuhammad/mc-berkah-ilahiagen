@@ -475,28 +475,24 @@ header('Content-Type: text/html; charset=utf-8');
         // Handle Form Order (Meneruskan ke WhatsApp CS)
         function handleOrder(e) {
             e.preventDefault();
-            const targetNumber = document.getElementById('target_number').value.trim();
-            const selectedProduct = document.getElementById('product_select').value;
-            const paymentMethod = document.getElementById('payment_method').value;
+            const targetNumber = document.getElementById('target_number').value;
+            const product = document.getElementById('product_select').value;
+            const payment = document.getElementById('payment_method').value;
 
-            if (!targetNumber) {
-                alert('Silakan isi nomor tujuan/ID pelanggan!');
-                return;
-            }
+            const adminWA = "6287790375321";
+            
+            let message = `Halo CS MC BERKAH ILAHI 09 agen, saya ingin melakukan pemesanan:\n\n`;
+            message += `📌 *Kategori*: ${currentCategory.toUpperCase()}\n`;
+            message += `🎯 *No. Tujuan / ID*: ${targetNumber}\n`;
+            message += `📦 *Produk*: ${product}\n`;
+            message += `💳 *Metode Bayar*: ${payment}\n\n`;
+            message += `Mohon segera diproses. Terima kasih!`;
 
-            // Menyiapkan Teks Pesan WhatsApp
-            const message = `Halo CS *MC BERKAH ILAHI 09 agen*, saya ingin melakukan pemesanan:%0A%0A` +
-                `📌 *Kategori:* ${currentCategory.toUpperCase()}%0A` +
-                `🎯 *Tujuan/No. HP:* ${targetNumber}%0A` +
-                `📦 *Produk:* ${selectedProduct}%0A` +
-                `💳 *Pembayaran:* ${paymentMethod}%0A%0A` +
-                `Mohon ditindaklanjuti. Terima kasih!`;
-
-            const adminWhatsApp = "6287790375321";
-            window.open(`https://wa.me/${adminWhatsApp}?text=${message}`, '_blank');
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${adminWA}?text=${encodedMessage}`, '_blank');
         }
 
-        // Inisialisasi awal saat halaman selesai dimuat
+        // Inisialisasi awal saat halaman di-load
         document.addEventListener('DOMContentLoaded', () => {
             renderProducts(currentCategory);
         });
