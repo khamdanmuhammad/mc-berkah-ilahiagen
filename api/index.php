@@ -172,7 +172,7 @@ header('Content-Type: text/html; charset=utf-8');
                 </div>
 
                 <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-lg transition shadow-md flex items-center justify-center gap-2 text-sm mt-2">
-                    <i class="fa-solid fa-paper-plane"></i> Lanjutkan Pembayaran
+                    <i class="fa-solid fa-paper-plane"></i> Lanjutkan Pembayaran via WhatsApp
                 </button>
             </form>
         </div>
@@ -475,22 +475,31 @@ header('Content-Type: text/html; charset=utf-8');
         // Handle Form Order (Meneruskan ke WhatsApp CS)
         function handleOrder(e) {
             e.preventDefault();
-            const number = document.getElementById('target_number').value;
-            const product = document.getElementById('product_select').value;
-            const payment = document.getElementById('payment_method').value;
+            const targetNumber = document.getElementById('target_number').value.trim();
+            const selectedProduct = document.getElementById('product_select').value;
+            const paymentMethod = document.getElementById('payment_method').value;
 
-            const adminWA = "6287790375321"; // Nomor WhatsApp CS
-            const message = `Halo Admin *MC BERKAH ILAHI 09 agen*, saya ingin melakukan pemesanan:%0A%0A` +
-                            `• *Produk:* ${product}%0A` +
-                            `• *No. Tujuan/ID:* ${number}%0A` +
-                            `• *Metode Bayar:* ${payment}%0A%0A` +
-                            `Mohon instruksi pembayaran lebih lanjut. Terima kasih!`;
+            if (!targetNumber) {
+                alert('Silakan isi nomor tujuan/ID pelanggan!');
+                return;
+            }
 
-            window.open(`https://wa.me/${adminWA}?text=${message}`, '_blank');
+            // Menyiapkan Teks Pesan WhatsApp
+            const message = `Halo CS *MC BERKAH ILAHI 09 agen*, saya ingin melakukan pemesanan:%0A%0A` +
+                `📌 *Kategori:* ${currentCategory.toUpperCase()}%0A` +
+                `🎯 *Tujuan/No. HP:* ${targetNumber}%0A` +
+                `📦 *Produk:* ${selectedProduct}%0A` +
+                `💳 *Pembayaran:* ${paymentMethod}%0A%0A` +
+                `Mohon ditindaklanjuti. Terima kasih!`;
+
+            const adminWhatsApp = "6287790375321";
+            window.open(`https://wa.me/${adminWhatsApp}?text=${message}`, '_blank');
         }
 
-        // Initialize Default Products
-        renderProducts('dana');
+        // Inisialisasi awal saat halaman selesai dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(currentCategory);
+        });
     </script>
 </body>
 </html>
