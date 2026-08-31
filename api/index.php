@@ -196,8 +196,8 @@ header('Content-Type: text/html; charset=utf-8');
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-slate-800">Aktv. Perdana</td>
-                            <td class="px-6 py-4">Akt. Perdana Telkomsel</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 15.000</td>
+                            <td class="px-6 py-4">Aktivasi Telkomsel 3GB 30 Hari</td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 23.000</td>
                             <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
                         </tr>
                         <tr>
@@ -325,13 +325,14 @@ header('Content-Type: text/html; charset=utf-8');
                 { name: "Steam Wallet Code IDR 50.000", price: "Rp 55.000" }
             ],
             perdana: [
-                { name: "Akt. Perdana Indosat IM3", price: "Rp 15.000" },
-                { name: "Akt. Perdana Smartfren", price: "Rp 12.000" },
-                { name: "Akt. Perdana Axis", price: "Rp 15.000" },
-                { name: "Akt. Perdana XL", price: "Rp 18.000" },
-                { name: "Akt. Perdana Telkomsel", price: "Rp 15.000" },
-                { name: "Akt. Perdana By.U", price: "Rp 15.000" },
-                { name: "Akt. Perdana Three (3)", price: "Rp 15.000" }
+                { name: "Aktivasi Telkomsel 3GB 30 Hari (APSN3)", price: "Rp 23.000" },
+                { name: "Aktivasi Telkomsel 5GB 30 Hari", price: "Rp 32.000" },
+                { name: "Aktivasi Indosat Freedom 3GB 30 Hari", price: "Rp 18.500" },
+                { name: "Aktivasi Indosat Freedom 8GB 30 Hari", price: "Rp 33.000" },
+                { name: "Aktivasi XL Extra Combo Flex 4GB 30 Hari", price: "Rp 21.000" },
+                { name: "Aktivasi Axis Bronet 3GB 60 Hari", price: "Rp 16.500" },
+                { name: "Aktivasi Tri (3) Happy 5GB 30 Hari", price: "Rp 19.000" },
+                { name: "Aktivasi Smartfren Unlimited Nonstop 6GB", price: "Rp 25.000" }
             ],
             pln: [
                 { name: "Token PLN 20.000", price: "Rp 20.500" },
