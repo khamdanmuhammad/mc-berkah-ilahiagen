@@ -241,6 +241,78 @@ header('Content-Type: text/html; charset=utf-8');
         </div>
     </section>
 
+    <!-- Section: Keunggulan -->
+    <section id="keunggulan" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 mb-8">
+        <div class="text-center mb-8">
+            <h3 class="text-xl md:text-2xl font-bold text-slate-800 flex items-center justify-center">
+                <i class="fa-solid fa-award text-amber-500 mr-2"></i> Mengapa Memilih MC BERKAH ILAHI 09 Agen?
+            </h3>
+            <p class="text-xs md:text-sm text-slate-500 mt-1">Kami menghadirkan layanan digital terbaik dengan fokus pada kenyamanan, kecepatan, dan keamanan transaksi Anda.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-sack-dollar"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-base mb-1">Harga Lebih Miring</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Penawaran harga terbaik di bawah pasaran umum, sangat cocok untuk pemakaian pribadi maupun dijual kembali.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-base mb-1">Proses Super Cepat</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Sistem terintegrasi memastikan pulsa, kuota, atau top up game masuk secara kilat setelah pembayaran dikonfirmasi.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-base mb-1">100% Amanah & Legal</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Jaminan garansi pengisian aman, legal, dan akurat hingga produk diterima dengan sukses.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h4 class="font-bold text-slate-800 text-base mb-1">Dukungan CS 24 Jam</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Tim Customer Service siap membantu kendala transaksi Anda via WhatsApp dengan ramah dan cepat respons.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Bantuan & Kontak -->
+    <section id="kontak" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 mb-12">
+        <div class="bg-gradient-to-r from-emerald-800 to-teal-900 rounded-3xl p-6 md:p-10 text-white shadow-xl">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <span class="bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Pusat Bantuan</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold mt-3">Butuh Bantuan Kendala Transaksi?</h3>
+                    <p class="text-emerald-100 text-xs md:text-sm mt-3 leading-relaxed">
+                        Jika ada kendala dalam transaksi, pertanyaan seputar paket, atau membutuhkan respon cepat dari admin, silakan hubungi kontak resmi kami.
+                    </p>
+                    <div class="mt-6 space-y-3 text-xs md:text-sm">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-whatsapp text-amber-400 text-lg"></i>
+                            <span>WhatsApp: <strong>+62 877-9037-5321</strong></span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-clock text-amber-400 text-lg"></i>
+                            <span>Jam Operasional: <strong>24 Jam Non-stop</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center">
+                    <h4 class="font-bold text-base mb-2">Hubungi CS Langsung</h4>
+                    <p class="text-xs text-emerald-100 mb-4">Klik tombol di bawah ini untuk terhubung langsung ke obrolan WhatsApp Customer Service.</p>
+                    <a href="https://wa.me/6287790375321?text=Halo%20Admin,%20saya%20butuh%20bantuan%20mengenai%20transaksi" target="_blank" class="inline-flex items-center justify-center w-full bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold py-3 px-6 rounded-xl transition shadow-lg text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Chat WhatsApp CS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-8 mt-auto border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 text-center text-xs">
