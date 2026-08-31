@@ -7,7 +7,9 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MC Berkah Ilahi Agen - Solusi Kebutuhan Digital Anda</title>
+    <title>PT. MC Berkah Ilahi 09 - Solusi Kebutuhan Digital Anda</title>
+    <!-- Favicon / PP Web -->
+    <link rel="icon" type="image/jpeg" href="MCberkahilahi09.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -22,12 +24,11 @@ header('Content-Type: text/html; charset=utf-8');
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
-                    <div class="bg-white text-emerald-700 p-2 rounded-lg font-bold text-xl shadow">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
+                    <!-- Logo / PP Web -->
+                    <img src="MCberkahilahi09.jpg" alt="Logo PT MC Berkah Ilahi 09" class="w-11 h-11 rounded-full object-cover border-2 border-amber-400 shadow">
                     <div>
-                        <span class="font-bold text-lg sm:text-xl tracking-tight block leading-none">MC BERKAH ILAHI</span>
-                        <span class="text-xs text-emerald-200">Agen Pulsa & PPOB Terpercaya</span>
+                        <span class="font-bold text-lg sm:text-xl tracking-tight block leading-none">PT. MC BERKAH ILAHI 09</span>
+                        <span class="text-xs text-emerald-200">Amanah, Unggul, Terpercaya</span>
                     </div>
                 </div>
 
@@ -77,16 +78,13 @@ header('Content-Type: text/html; charset=utf-8');
                 </div>
             </div>
             <div class="hidden md:flex justify-center">
-                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl w-full max-w-sm">
-                    <div class="flex items-center space-x-3 text-white mb-4">
-                        <i class="fa-solid fa-shield-halved text-2xl text-amber-400"></i>
-                        <div>
-                            <h4 class="font-bold text-sm">Jaminan Transaksi Sukses</h4>
-                            <p class="text-xs text-emerald-100">Proses otomatis hitungan detik</p>
-                        </div>
-                    </div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl w-full max-w-sm text-center">
+                    <!-- Display Logo / PP di Card Banner -->
+                    <img src="MCberkahilahi09.jpg" alt="Logo PT MC Berkah Ilahi 09" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-amber-400 shadow-lg object-cover">
+                    <h4 class="font-bold text-base text-white">PT. MC BERKAH ILAHI 09</h4>
+                    <p class="text-xs text-amber-300 font-medium mb-3">Amanah, Unggul, Terpercaya</p>
                     <hr class="border-white/10 my-3">
-                    <div class="text-xs text-emerald-100 space-y-2">
+                    <div class="text-xs text-emerald-100 space-y-2 text-left">
                         <div class="flex justify-between"><span>Status Server:</span> <span class="text-emerald-300 font-bold">ONLINE (99.9%)</span></div>
                         <div class="flex justify-between"><span>Metode Pembayaran:</span> <span>SeaBank, QRIS, Bank, E-Wallet</span></div>
                     </div>
@@ -228,7 +226,7 @@ header('Content-Type: text/html; charset=utf-8');
         <div class="bg-emerald-900 text-white rounded-2xl p-6 md:p-8 text-center flex flex-col items-center">
             <i class="fa-solid fa-headset text-4xl text-amber-400 mb-3"></i>
             <h3 class="text-2xl font-bold mb-2">Butuh Bantuan Kendala Transaksi?</h3>
-            <p class="text-emerald-200 text-sm max-w-lg mb-6">Tim Customer Service MC Berkah Ilahi Agen siap membantu transaksi Anda jika terjadi keterlambatan atau kesalahan pengisian.</p>
+            <p class="text-emerald-200 text-sm max-w-lg mb-6">Tim Customer Service PT MC Berkah Ilahi 09 siap membantu transaksi Anda jika terjadi keterlambatan atau kesalahan pengisian.</p>
             <a href="https://wa.me/6287790375321" target="_blank" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-xl transition shadow flex items-center gap-2 text-sm">
                 <i class="fa-brands fa-whatsapp text-lg"></i> Chat CS (0877-9037-5321)
             </a>
@@ -237,7 +235,7 @@ header('Content-Type: text/html; charset=utf-8');
 
     <!-- Keunggulan Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 mb-12">
-        <h3 class="text-xl font-bold text-center text-slate-800 mb-8">Mengapa Memilih MC Berkah Ilahi?</h3>
+        <h3 class="text-xl font-bold text-center text-slate-800 mb-8">Mengapa Memilih PT MC Berkah Ilahi 09?</h3>
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
@@ -267,11 +265,11 @@ header('Content-Type: text/html; charset=utf-8');
     <footer class="mt-auto bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:text-left">
             <div class="mb-4 md:mb-0">
-                <p class="font-bold text-white">MC Berkah Ilahi Agen</p>
+                <p class="font-bold text-white">PT. MC BERKAH ILAHI 09</p>
                 <p class="text-xs mt-1">Layanan Pengisian Digital & PPOB Terpercaya.</p>
             </div>
             <div class="text-xs">
-                <p>&copy; <?php echo date("Y"); ?> MC Berkah Ilahi. All rights reserved.</p>
+                <p>&copy; <?php echo date("Y"); ?> PT. MC Berkah Ilahi 09. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -360,7 +358,7 @@ header('Content-Type: text/html; charset=utf-8');
             const payment = document.getElementById('payment_method').value;
 
             const adminWA = "6287790375321"; // Nomor WhatsApp CS
-            const message = `Halo Admin *MC Berkah Ilahi Agen*, saya ingin melakukan pemesanan:%0A%0A` +
+            const message = `Halo Admin *PT. MC BERKAH ILAHI 09*, saya ingin melakukan pemesanan:%0A%0A` +
                             `• *Produk:* ${product}%0A` +
                             `• *No. Tujuan:* ${number}%0A` +
                             `• *Metode Bayar:* ${payment}%0A%0A` +
