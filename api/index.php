@@ -74,14 +74,13 @@ header('Content-Type: text/html; charset=utf-8');
             <div>
                 <span class="bg-emerald-600 text-emerald-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Serba Cepat & Murah</span>
                 <h1 class="text-3xl md:text-5xl font-extrabold mt-3 leading-tight">Isi Pulsa, Game, E-Wallet & Token PLN Tanpa Ribet</h1>
-                <p class="mt-4 text-emerald-100 text-sm md:text-base">Layanan pengisian otomatis 24 jam dengan harga agen paling kompetitif. Proses instan dan aman.</p>
+                <p class="mt-4 text-emerald-100 text-sm md:text-base">Layanan pengisian otomatis 24 jam dengan harga bersaing di pasaran. Proses instan dan aman.</p>
                 <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
                     <a href="#layanan" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg transition text-sm">Transaksi Sekarang</a>
                 </div>
             </div>
             <div class="hidden md:flex justify-center">
                 <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl w-full max-w-sm text-center">
-                    <!-- Display Logo / PP di Card Banner -->
                     <img src="https://raw.githubusercontent.com/khamdanmuhammad/mc-berkah-ilahiagen/main/MCberkahilahi09.jpg" alt="Logo PT MC Berkah Ilahi 09" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-amber-400 shadow-lg object-cover">
                     <h4 class="font-bold text-base text-white">PT. MC BERKAH ILAHI 09</h4>
                     <p class="text-xs text-amber-300 font-medium mb-3">Amanah, Unggul, Terpercaya</p>
@@ -159,52 +158,54 @@ header('Content-Type: text/html; charset=utf-8');
         </div>
     </main>
 
-    <!-- Section: Cek Harga -->
+    <!-- Section: Cek Harga Pasar Vs Harga PT MC -->
     <section id="harga" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-8">
-        <h3 class="text-xl font-bold text-center text-slate-800 mb-6 flex items-center justify-center">
-            <i class="fa-solid fa-tags text-emerald-600 mr-2"></i> Daftar Harga Terpopuler
+        <h3 class="text-xl font-bold text-center text-slate-800 mb-2 flex items-center justify-center">
+            <i class="fa-solid fa-tags text-emerald-600 mr-2"></i> Perbandingan Harga Pasaran
         </h3>
+        <p class="text-xs text-center text-slate-500 mb-6">Harga kami disesuaikan agar lebih hemat dari konter umum namun tetap memberikan margin keuntungan.</p>
+        
         <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden">
             <div class="overflow-x-auto">
                 <table class="w-full text-sm text-left text-slate-600">
                     <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b">
                         <tr>
-                            <th scope="col" class="px-6 py-3">Kategori</th>
-                            <th scope="col" class="px-6 py-3">Produk</th>
-                            <th scope="col" class="px-6 py-3">Harga Agen</th>
-                            <th scope="col" class="px-6 py-3">Status</th>
+                            <th scope="col" class="px-6 py-3">Produk / Layanan</th>
+                            <th scope="col" class="px-6 py-3">Harga Konter Lain</th>
+                            <th scope="col" class="px-6 py-3">Harga PT MC Berkah</th>
+                            <th scope="col" class="px-6 py-3">Hemat</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100">
                         <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Pulsa</td>
-                            <td class="px-6 py-4">Pulsa Reguler 5.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 6.000</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">E-Wallet</td>
-                            <td class="px-6 py-4">DANA Topup 20.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 20.800</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Voucher Game</td>
-                            <td class="px-6 py-4">Mobile Legends 86 Diamond</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 21.500</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Aktv. Perdana</td>
-                            <td class="px-6 py-4">Aktivasi Telkomsel 3GB 30 Hari</td>
+                            <td class="px-6 py-4 font-semibold text-slate-800">Aktv. Perdana Telkomsel 3GB 30 Hari</td>
+                            <td class="px-6 py-4 text-slate-400 line-through">Rp 25.000</td>
                             <td class="px-6 py-4 font-bold text-emerald-600">Rp 23.000</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
+                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Hemat Rp 2.000</span></td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">PLN</td>
-                            <td class="px-6 py-4">Token PLN 20.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 20.500</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
+                            <td class="px-6 py-4 font-semibold text-slate-800">Pulsa Reguler 10.000</td>
+                            <td class="px-6 py-4 text-slate-400 line-through">Rp 13.000</td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 12.000</td>
+                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Hemat Rp 1.000</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-slate-800">DANA Top Up 50.000</td>
+                            <td class="px-6 py-4 text-slate-400 line-through">Rp 53.000</td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 51.500</td>
+                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Hemat Rp 1.500</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-slate-800">MLBB 86 Diamonds</td>
+                            <td class="px-6 py-4 text-slate-400 line-through">Rp 24.000</td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 22.500</td>
+                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Hemat Rp 1.500</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-slate-800">Token PLN 20.000</td>
+                            <td class="px-6 py-4 text-slate-400 line-through">Rp 23.000</td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 21.500</td>
+                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Hemat Rp 1.500</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -251,8 +252,8 @@ header('Content-Type: text/html; charset=utf-8');
                 <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
                     <i class="fa-solid fa-tag"></i>
                 </div>
-                <h4 class="font-bold text-slate-800 mb-2">Harga Murah Agen</h4>
-                <p class="text-xs text-slate-600">Mendapatkan harga tangan pertama untuk margin keuntungan jual kembali yang maksimal.</p>
+                <h4 class="font-bold text-slate-800 mb-2">Harga Bersaing Pasaran</h4>
+                <p class="text-xs text-slate-600">Mendapatkan harga bersaing yang aman di margin keuntungan namun tetap murah bagi pelanggan.</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
@@ -291,69 +292,79 @@ header('Content-Type: text/html; charset=utf-8');
 
     <!-- JavaScript Dynamic Logic -->
     <script>
-        // Data Produk Lengkap Sesuai Aplikasi
+        // Data Produk Disesuaikan Dengan Modal & Harga Pasaran Bersaing
         const products = {
             pulsa: [
-                { name: "Pulsa Reguler 5.000", price: "Rp 6.000" },
-                { name: "Pulsa Reguler 10.000", price: "Rp 11.000" },
-                { name: "Pulsa Reguler 25.000", price: "Rp 25.800" },
-                { name: "Pulsa Reguler 50.000", price: "Rp 50.500" },
-                { name: "Pulsa Reguler 100.000", price: "Rp 99.000" },
-                { name: "Paket Data 1 GB / 3 Hari", price: "Rp 8.000" },
-                { name: "Paket Data 5 GB / 7 Hari", price: "Rp 22.000" }
+                { name: "Pulsa Reguler 5.000", price: "Rp 7.000" },
+                { name: "Pulsa Reguler 10.000", price: "Rp 12.000" },
+                { name: "Pulsa Reguler 15.000", price: "Rp 17.000" },
+                { name: "Pulsa Reguler 20.000", price: "Rp 22.000" },
+                { name: "Pulsa Reguler 25.000", price: "Rp 27.000" },
+                { name: "Pulsa Reguler 50.000", price: "Rp 52.000" },
+                { name: "Pulsa Reguler 100.000", price: "Rp 102.000" },
+                { name: "Paket Data 1.5 GB / 3 Hari", price: "Rp 12.000" },
+                { name: "Paket Data 3 GB / 7 Hari", price: "Rp 20.000" },
+                { name: "Paket Data 5 GB / 30 Hari", price: "Rp 33.000" }
             ],
             ewallet: [
-                { name: "DANA Topup 20.000", price: "Rp 20.800" },
-                { name: "ShopeePay Topup 50.000", price: "Rp 50.800" },
-                { name: "Gojek/Gopay Topup 20.000", price: "Rp 20.800" },
-                { name: "Gojek Driver 50.000", price: "Rp 50.800" },
-                { name: "OVO Topup 50.000", price: "Rp 50.800" },
-                { name: "LinkAja Topup 25.000", price: "Rp 25.800" },
-                { name: "Grab Penumpang / Driver 50.000", price: "Rp 50.800" },
-                { name: "Maxim Topup 20.000", price: "Rp 21.000" },
-                { name: "AstraPay / Kaspro / iSaku 20.000", price: "Rp 20.800" },
-                { name: "Sakuku / TIX-ID / M-TIX 50.000", price: "Rp 51.000" }
+                { name: "DANA Topup 10.000", price: "Rp 11.500" },
+                { name: "DANA Topup 20.000", price: "Rp 21.500" },
+                { name: "DANA Topup 50.000", price: "Rp 51.500" },
+                { name: "ShopeePay Topup 20.000", price: "Rp 21.500" },
+                { name: "ShopeePay Topup 50.000", price: "Rp 51.500" },
+                { name: "Gopay Customer 20.000", price: "Rp 21.500" },
+                { name: "Gopay Driver 50.000", price: "Rp 51.500" },
+                { name: "OVO Topup 20.000", price: "Rp 21.500" },
+                { name: "OVO Topup 50.000", price: "Rp 51.500" },
+                { name: "LinkAja Topup 20.000", price: "Rp 21.500" },
+                { name: "Maxim Driver / Penumpang 20.000", price: "Rp 22.000" },
+                { name: "AstraPay / Kaspro 20.000", price: "Rp 21.500" },
+                { name: "TIX-ID / M-TIX 50.000", price: "Rp 52.000" }
             ],
             game: [
-                { name: "Free Fire - 140 Diamonds", price: "Rp 19.500" },
-                { name: "Mobile Legends - 86 Diamonds", price: "Rp 21.500" },
-                { name: "PUBG Mobile - 60 UC", price: "Rp 15.000" },
-                { name: "Call of Duty - 31 CP", price: "Rp 6.000" },
-                { name: "Garena Shell - 33 Shell", price: "Rp 10.500" },
-                { name: "Arena of Valor / Honor of Kings", price: "Rp 12.000" },
-                { name: "Roblox - Robux Voucher", price: "Rp 25.000" },
-                { name: "Steam Wallet Code IDR 50.000", price: "Rp 55.000" }
+                { name: "Free Fire 50 Diamonds", price: "Rp 8.000" },
+                { name: "Free Fire 140 Diamonds", price: "Rp 20.000" },
+                { name: "Free Fire 355 Diamonds", price: "Rp 50.000" },
+                { name: "Mobile Legends 44 Diamonds", price: "Rp 12.500" },
+                { name: "Mobile Legends 86 Diamonds", price: "Rp 22.500" },
+                { name: "Mobile Legends 172 Diamonds", price: "Rp 45.000" },
+                { name: "PUBG Mobile 60 UC", price: "Rp 15.500" },
+                { name: "PUBG Mobile 325 UC", price: "Rp 73.000" },
+                { name: "Call of Duty 31 CP", price: "Rp 6.500" },
+                { name: "Garena Shell 33 Shell", price: "Rp 11.000" }
             ],
             perdana: [
-                { name: "Aktivasi Telkomsel 3GB 30 Hari (APSN3)", price: "Rp 23.000" },
-                { name: "Aktivasi Telkomsel 5GB 30 Hari", price: "Rp 32.000" },
-                { name: "Aktivasi Indosat Freedom 3GB 30 Hari", price: "Rp 18.500" },
-                { name: "Aktivasi Indosat Freedom 8GB 30 Hari", price: "Rp 33.000" },
-                { name: "Aktivasi XL Extra Combo Flex 4GB 30 Hari", price: "Rp 21.000" },
-                { name: "Aktivasi Axis Bronet 3GB 60 Hari", price: "Rp 16.500" },
-                { name: "Aktivasi Tri (3) Happy 5GB 30 Hari", price: "Rp 19.000" },
-                { name: "Aktivasi Smartfren Unlimited Nonstop 6GB", price: "Rp 25.000" }
+                { name: "APSN3 - Aktivasi Perdana Telkomsel 3GB 30 Hari", price: "Rp 23.000" },
+                { name: "Aktivasi Perdana Telkomsel 5GB 30 Hari", price: "Rp 32.000" },
+                { name: "Aktivasi Perdana Indosat IM3 3GB 30 Hari", price: "Rp 22.000" },
+                { name: "Aktivasi Perdana Smartfren Unlimited 7 Hari", price: "Rp 21.000" },
+                { name: "Aktivasi Perdana Axis Bronet 2GB 60 Hari", price: "Rp 18.000" },
+                { name: "Aktivasi Perdana XL Xtra Combo Flex 4GB", price: "Rp 25.000" },
+                { name: "Aktivasi Perdana By.U 10GB 30 Hari", price: "Rp 35.000" },
+                { name: "Aktivasi Perdana Tri Happy 4GB 30 Hari", price: "Rp 22.000" }
             ],
             pln: [
-                { name: "Token PLN 20.000", price: "Rp 20.500" },
-                { name: "Token PLN 50.000", price: "Rp 50.500" },
-                { name: "Token PLN 100.000", price: "Rp 100.500" }
+                { name: "Token PLN 20.000", price: "Rp 21.500" },
+                { name: "Token PLN 50.000", price: "Rp 51.500" },
+                { name: "Token PLN 100.000", price: "Rp 101.500" },
+                { name: "Token PLN 200.000", price: "Rp 201.500" }
             ],
             voucher_fisik: [
-                { name: "Voucher Data Telkomsel 1.5GB", price: "Rp 12.000" },
-                { name: "Voucher Data Indosat 2.5GB", price: "Rp 11.000" },
-                { name: "Voucher Data Axis AIGO 2GB", price: "Rp 10.000" },
-                { name: "Voucher Data Tri 3GB", price: "Rp 13.000" }
+                { name: "Voucher Data Telkomsel 1.5GB 3 Hari", price: "Rp 12.000" },
+                { name: "Voucher Data Indosat Freedom 2.5GB 5 Hari", price: "Rp 13.500" },
+                { name: "Voucher Data Axis AIGO 2GB 5 Hari", price: "Rp 11.000" },
+                { name: "Voucher Data Tri Happy 3GB 5 Hari", price: "Rp 14.000" }
             ],
             nelpon: [
-                { name: "Paket Nelpon Telkomsel All Operator", price: "Rp 15.000" },
-                { name: "Paket SMS Indosat All Operator", price: "Rp 6.000" },
-                { name: "Paket Haji & Umroh 7 Hari", price: "Rp 150.000" }
+                { name: "Paket Nelpon Telkomsel 185 Menit / 7 Hari", price: "Rp 17.000" },
+                { name: "Paket SMS Indosat All Operator 600 SMS", price: "Rp 7.500" },
+                { name: "Paket Haji & Umroh Telkomsel 7 Hari 5GB", price: "Rp 160.000" }
             ],
             digital: [
-                { name: "Google Play Voucher Rp 20.000", price: "Rp 22.000" },
-                { name: "Voucher Wifi.ID 1 Hari", price: "Rp 6.000" },
-                { name: "Voucher Tiktok Coin Gift Card", price: "Rp 15.000" }
+                { name: "Google Play Code IDR 20.000", price: "Rp 22.500" },
+                { name: "Google Play Code IDR 50.000", price: "Rp 54.000" },
+                { name: "Voucher Wifi.ID 24 Jam", price: "Rp 6.500" },
+                { name: "Voucher Tiktok Coin 70 Coins", price: "Rp 14.500" }
             ]
         };
 
