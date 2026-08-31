@@ -126,6 +126,15 @@ header('Content-Type: text/html; charset=utf-8');
                 <button onclick="switchTab('telkomsel')" id="tab-telkomsel" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-signal text-base"></i> Telkomsel
                 </button>
+                <button onclick="switchTab('tsel_promo')" id="tab-tsel_promo" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-fire-flame-curved text-base"></i> Tsel Merdeka
+                </button>
+                <button onclick="switchTab('tsel_harian')" id="tab-tsel_harian" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-calendar-day text-base"></i> Tsel Harian
+                </button>
+                <button onclick="switchTab('tsel_flash')" id="tab-tsel_flash" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-bolt-lightning text-base"></i> Tsel Flash
+                </button>
                 <button onclick="switchTab('indosat')" id="tab-indosat" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-tower-cell text-base"></i> Indosat IM3
                 </button>
@@ -306,7 +315,7 @@ header('Content-Type: text/html; charset=utf-8');
 
     <!-- JavaScript Dynamic Logic -->
     <script>
-        // Data Produk Dipisah Per Layanan
+        // Data Produk Dipisah Per Layanan (Termasuk Data Flash yang Ditambahkan)
         const products = {
             pulsa: [
                 { name: "Pulsa Reguler 5.000 (All Operator)", price: "Rp 6.500" },
@@ -372,6 +381,33 @@ header('Content-Type: text/html; charset=utf-8');
                 { name: "S50 - Telkomsel Reguler 50.000", price: "Rp 51.800" },
                 { name: "S100 - Telkomsel Reguler 100.000", price: "Rp 101.800" }
             ],
+            tsel_promo: [
+                { name: "SBP3 - Telkomsel Data Flash 3GB 28Hr", price: "Rp 31.550" },
+                { name: "SBP4 - Telkomsel Data Flash 4GB 28Hr", price: "Rp 41.750" },
+                { name: "SBP5 - Telkomsel Data Flash 5GB 28Hr", price: "Rp 43.050" },
+                { name: "SBL3 - Data Flash Promo Merdeka 3GB 24 Jam 28Hr", price: "Rp 31.750" },
+                { name: "SBL4 - Data Flash Promo Merdeka 4GB 24 Jam 28Hr", price: "Rp 40.350" },
+                { name: "SBL5 - Data Flash Promo Merdeka 5GB 24 Jam 28Hr", price: "Rp 43.600" },
+                { name: "SBL6 - Data Flash Promo Merdeka 6GB 24 Jam 28Hr", price: "Rp 48.600" },
+                { name: "SBL7 - Data Flash Promo Merdeka 7GB 24 Jam 28Hr", price: "Rp 49.850" },
+                { name: "SBL8 - Data Flash Promo Merdeka 8GB 24 Jam 28Hr", price: "Rp 51.450" },
+                { name: "SBL9 - Data Flash Promo Merdeka 9GB 24 Jam 28Hr", price: "Rp 58.950" }
+            ],
+            tsel_harian: [
+                { name: "SBH2 - Data Flash Harian 2.5GB 5Hari", price: "Rp 13.400" },
+                { name: "SBH3 - Data Flash Harian 3GB 5Hari", price: "Rp 14.650" },
+                { name: "SBH7 - Data Flash Harian 7GB 7Hari", price: "Rp 30.100" }
+            ],
+            tsel_flash: [
+                { name: "SB100 - Telkomsel Data Flash 100MB 7Hr", price: "Rp 3.850" },
+                { name: "SB250 - Telkomsel Data Flash 250MB 7Hr", price: "Rp 5.500" },
+                { name: "SB500 - Telkomsel Data Flash 500MB 15Hr", price: "Rp 7.450" },
+                { name: "SB750 - Telkomsel Data Flash 750MB 7Hr", price: "Rp 11.950" },
+                { name: "SB1 - Telkomsel Data Flash 1GB 28Hr", price: "Rp 12.900" },
+                { name: "SB2 - Telkomsel Data Flash 2GB 28Hr", price: "Rp 22.400" },
+                { name: "SB10 - Telkomsel Data Flash 10GB 30Hr", price: "Rp 65.000" },
+                { name: "SB15 - Telkomsel Data Flash 15GB 30Hr", price: "Rp 87.000" }
+            ],
             indosat: [
                 { name: "I5 - Indosat Reguler 5.000", price: "Rp 6.700" },
                 { name: "I10 - Indosat Reguler 10.000", price: "Rp 11.700" },
@@ -427,74 +463,70 @@ header('Content-Type: text/html; charset=utf-8');
         // Switch Kategori Spesifik
         function switchTab(category) {
             currentCategory = category;
-            
-            // Reset style tab
+
+            // Reset style semua button tab
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.className = "tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100";
+                btn.classList.remove('active', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-500', 'border-2');
+                btn.classList.add('bg-slate-50', 'text-slate-600', 'border-slate-200');
             });
 
-            // Set active style tab
-            const activeTab = document.getElementById(`tab-${category}`);
-            if (activeTab) {
-                activeTab.className = "tab-btn active bg-emerald-50 text-emerald-700 border-emerald-500 border-2 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition";
+            // Set style active pada button yang dipilih
+            const activeBtn = document.getElementById(`tab-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-slate-50', 'text-slate-600', 'border-slate-200');
+                activeBtn.classList.add('active', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-500', 'border-2');
             }
 
-            // Update Label Input
-            const label = document.getElementById('input-label');
+            // Update Label Input sesuai kategori
+            const inputLabel = document.getElementById('input-label');
             const targetInput = document.getElementById('target_number');
             
-            if(category === 'pln') {
-                label.innerText = "Nomor Meter / ID Pelanggan PLN";
-                targetInput.placeholder = "Contoh: 14023849120";
-            } else if(category === 'ff' || category === 'mlbb') {
-                label.innerText = "User ID / Zone ID Game";
+            if (['ff', 'mlbb'].includes(category)) {
+                inputLabel.innerText = "ID Game / User ID";
                 targetInput.placeholder = "Contoh: 12345678 (1234)";
+            } else if (category === 'pln') {
+                inputLabel.innerText = "Nomor Meter / ID Pelanggan PLN";
+                targetInput.placeholder = "Contoh: 56123456789";
             } else {
-                label.innerText = `Nomor HP ${category.toUpperCase()}`;
+                inputLabel.innerText = `Nomor HP ${category.toUpperCase().replace('_', ' ')}`;
                 targetInput.placeholder = "Contoh: 082226238706";
             }
 
-            renderProducts(category);
-        }
-
-        // Render Opsi Dropdown Produk
-        function renderProducts(category) {
+            // Render opsi produk pada select dropdown
             const select = document.getElementById('product_select');
             select.innerHTML = '';
             
-            if(products[category]) {
+            if (products[category]) {
                 products[category].forEach(item => {
-                    const opt = document.createElement('option');
-                    opt.value = `${item.name} (${item.price})`;
-                    opt.innerText = `${item.name} - ${item.price}`;
-                    select.appendChild(opt);
+                    const option = document.createElement('option');
+                    option.value = `${item.name} - ${item.price}`;
+                    option.textContent = `${item.name} (${item.price})`;
+                    select.appendChild(option);
                 });
             }
         }
 
-        // Handle Form Order (Meneruskan ke WhatsApp CS)
+        // Handle Submit Pemesanan ke WhatsApp
         function handleOrder(e) {
             e.preventDefault();
-            const targetNumber = document.getElementById('target_number').value;
+            const number = document.getElementById('target_number').value;
             const product = document.getElementById('product_select').value;
             const payment = document.getElementById('payment_method').value;
 
-            const adminWA = "6287790375321";
-            
-            let message = `Halo CS MC BERKAH ILAHI 09 agen, saya ingin melakukan pemesanan:\n\n`;
-            message += `📌 *Kategori*: ${currentCategory.toUpperCase()}\n`;
-            message += `🎯 *No. Tujuan / ID*: ${targetNumber}\n`;
-            message += `📦 *Produk*: ${product}\n`;
-            message += `💳 *Metode Bayar*: ${payment}\n\n`;
-            message += `Mohon segera diproses. Terima kasih!`;
+            const message = `*HALO CS MC BERKAH ILAHI 09 AGEN*%0A%0A` +
+                `Saya mau order produk berikut:%0A` +
+                `• *Layanan*: ${currentCategory.toUpperCase().replace('_', ' ')}%0A` +
+                `• *Produk*: ${product}%0A` +
+                `• *Nomor Tujuan/ID*: ${number}%0A` +
+                `• *Metode Bayar*: ${payment}%0A%0A` +
+                `Mohon segera diproses, terima kasih!`;
 
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/${adminWA}?text=${encodedMessage}`, '_blank');
+            window.open(`https://wa.me/6287790375321?text=${message}`, '_blank');
         }
 
-        // Inisialisasi awal saat halaman di-load
+        // Inisialisasi awal saat halaman dimuat
         document.addEventListener('DOMContentLoaded', () => {
-            renderProducts(currentCategory);
+            switchTab('dana');
         });
     </script>
 </body>
