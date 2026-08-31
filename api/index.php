@@ -7,7 +7,7 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT. MC Berkah Ilahi 09 - Solusi Kebutuhan Digital Anda</title>
+    <title>MC BERKAH ILAHI 09 agen - Solusi Kebutuhan Digital Anda</title>
     <!-- Favicon / PP Web -->
     <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/khamdanmuhammad/mc-berkah-ilahiagen/main/MCberkahilahi09.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,9 +24,9 @@ header('Content-Type: text/html; charset=utf-8');
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
-                    <img src="https://raw.githubusercontent.com/khamdanmuhammad/mc-berkah-ilahiagen/main/MCberkahilahi09.jpg" alt="Logo PT MC Berkah Ilahi 09" class="w-11 h-11 rounded-full object-cover border-2 border-amber-400 shadow">
+                    <img src="https://raw.githubusercontent.com/khamdanmuhammad/mc-berkah-ilahiagen/main/MCberkahilahi09.jpg" alt="Logo MC BERKAH ILAHI 09 agen" class="w-11 h-11 rounded-full object-cover border-2 border-amber-400 shadow">
                     <div>
-                        <span class="font-bold text-lg sm:text-xl tracking-tight block leading-none">PT. MC BERKAH ILAHI 09</span>
+                        <span class="font-bold text-lg sm:text-xl tracking-tight block leading-none">MC BERKAH ILAHI 09 agen</span>
                         <span class="text-xs text-emerald-200">Amanah, Unggul, Terpercaya</span>
                     </div>
                 </div>
@@ -73,20 +73,20 @@ header('Content-Type: text/html; charset=utf-8');
             <div>
                 <span class="bg-emerald-600 text-emerald-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Lengkap & Ekonomis</span>
                 <h1 class="text-3xl md:text-5xl font-extrabold mt-3 leading-tight">Pengisian Produk Digital Instan & Terpercaya</h1>
-                <p class="mt-4 text-emerald-100 text-sm md:text-base">Harga bersaing transparan dengan margin hemat. Pilih kategori layanan sesuai kebutuhan Anda.</p>
+                <p class="mt-4 text-emerald-100 text-sm md:text-base">Pengisian E-Wallet, Pulsa All Operator, Token PLN, dan Voucher Game Cepat & Hemat.</p>
                 <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
                     <a href="#layanan" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg transition text-sm">Transaksi Sekarang</a>
                 </div>
             </div>
             <div class="hidden md:flex justify-center">
                 <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl w-full max-w-sm text-center">
-                    <img src="https://raw.githubusercontent.com/khamdanmuhammad/mc-berkah-ilahiagen/main/MCberkahilahi09.jpg" alt="Logo PT MC Berkah Ilahi 09" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-amber-400 shadow-lg object-cover">
-                    <h4 class="font-bold text-base text-white">PT. MC BERKAH ILAHI 09</h4>
+                    <img src="https://raw.githubusercontent.com/khamdanmuhammad/mc-berkah-ilahiagen/main/MCberkahilahi09.jpg" alt="Logo MC BERKAH ILAHI 09 agen" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-amber-400 shadow-lg object-cover">
+                    <h4 class="font-bold text-base text-white">MC BERKAH ILAHI 09 agen</h4>
                     <p class="text-xs text-amber-300 font-medium mb-3">Amanah, Unggul, Terpercaya</p>
                     <hr class="border-white/10 my-3">
                     <div class="text-xs text-emerald-100 space-y-2 text-left">
                         <div class="flex justify-between"><span>Status Server:</span> <span class="text-emerald-300 font-bold">ONLINE (24 Jam)</span></div>
-                        <div class="flex justify-between"><span>Biaya Admin:</span> <span>+ Rp 1.500 (Bersaing)</span></div>
+                        <div class="flex justify-between"><span>Proses:</span> <span>Otomatis & Kilat</span></div>
                     </div>
                 </div>
             </div>
@@ -100,8 +100,11 @@ header('Content-Type: text/html; charset=utf-8');
                 <i class="fa-solid fa-cart-shopping text-emerald-600 mr-2"></i> Form Pemesanan
             </h2>
 
-            <!-- Tombol Kategori Spesifik (Dipisah Per Brand/Layanan) -->
+            <!-- Tombol Kategori Spesifik (Per Brand / Per Layanan) -->
             <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 mb-6">
+                <button onclick="switchTab('pulsa')" id="tab-pulsa" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-mobile-screen-button text-base"></i> Pulsa Regular
+                </button>
                 <button onclick="switchTab('dana')" id="tab-dana" class="tab-btn active bg-emerald-50 text-emerald-700 border-emerald-500 border-2 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition">
                     <i class="fa-solid fa-wallet text-base"></i> DANA
                 </button>
@@ -128,6 +131,12 @@ header('Content-Type: text/html; charset=utf-8');
                 </button>
                 <button onclick="switchTab('xl_axis')" id="tab-xl_axis" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-sim-card text-base"></i> XL / Axis
+                </button>
+                <button onclick="switchTab('tri')" id="tab-tri" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-3 text-base"></i> Tri (3)
+                </button>
+                <button onclick="switchTab('smartfren')" id="tab-smartfren" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-wifi text-base"></i> Smartfren
                 </button>
                 <button onclick="switchTab('ff')" id="tab-ff" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-fire text-base"></i> Free Fire
@@ -172,45 +181,45 @@ header('Content-Type: text/html; charset=utf-8');
     <!-- Section: Cek Harga Pasaran -->
     <section id="harga" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-8">
         <h3 class="text-xl font-bold text-center text-slate-800 mb-2 flex items-center justify-center">
-            <i class="fa-solid fa-tags text-emerald-600 mr-2"></i> Perbandingan Harga Pasaran (Laba Tetap Rp 1.500)
+            <i class="fa-solid fa-tags text-emerald-600 mr-2"></i> Daftar Harga Layanan Terbaik
         </h3>
-        <p class="text-xs text-center text-slate-500 mb-6">Penetapan harga transparan dari modal server sehingga Anda mendapatkan harga bersaing & paling hemat.</p>
+        <p class="text-xs text-center text-slate-500 mb-6">Harga hemat dan bersaing di pasaran untuk semua transaksi produk digital Anda.</p>
         
         <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden">
             <div class="overflow-x-auto">
                 <table class="w-full text-sm text-left text-slate-600">
                     <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b">
                         <tr>
-                            <th scope="col" class="px-6 py-3">Produk</th>
+                            <th scope="col" class="px-6 py-3">Nama Produk / Nominal</th>
                             <th scope="col" class="px-6 py-3">Harga Pasaran</th>
-                            <th scope="col" class="px-6 py-3">Harga PT MC</th>
-                            <th scope="col" class="px-6 py-3">Margin Laba</th>
+                            <th scope="col" class="px-6 py-3">Harga Agen (Hemat)</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100">
                         <tr>
                             <td class="px-6 py-4 font-semibold text-slate-800">Saldo DANA 10.000 (DNBA10)</td>
                             <td class="px-6 py-4 text-slate-400 line-through">Rp 13.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 11.600</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Rp 1.500</span></td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 11.500</td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-slate-800">Saldo DANA 20.000 (DNBA20)</td>
                             <td class="px-6 py-4 text-slate-400 line-through">Rp 23.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 21.600</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Rp 1.500</span></td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 21.500</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-slate-800">Pulsa All Operator 10.000</td>
+                            <td class="px-6 py-4 text-slate-400 line-through">Rp 13.000</td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 11.500</td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-slate-800">Token PLN 20.000</td>
                             <td class="px-6 py-4 text-slate-400 line-through">Rp 23.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 21.600</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Rp 1.500</span></td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 21.500</td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-slate-800">Telkomsel Reguler 10.000</td>
                             <td class="px-6 py-4 text-slate-400 line-through">Rp 13.000</td>
                             <td class="px-6 py-4 font-bold text-emerald-600">Rp 11.800</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Rp 1.500</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -244,7 +253,7 @@ header('Content-Type: text/html; charset=utf-8');
 
     <!-- Keunggulan Section -->
     <section id="keunggulan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 mb-12">
-        <h3 class="text-xl font-bold text-center text-slate-800 mb-8">Mengapa Memilih PT MC Berkah Ilahi 09?</h3>
+        <h3 class="text-xl font-bold text-center text-slate-800 mb-8">Mengapa Memilih MC BERKAH ILAHI 09 agen?</h3>
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
@@ -258,7 +267,7 @@ header('Content-Type: text/html; charset=utf-8');
                     <i class="fa-solid fa-tag"></i>
                 </div>
                 <h4 class="font-bold text-slate-800 mb-2">Paling Hemat</h4>
-                <p class="text-xs text-slate-600">Margin untung flat Rp 1.500 membuat harga tetap lebih murah dibanding konter biasa.</p>
+                <p class="text-xs text-slate-600">Harga produk ekonomis dan tetap bersaing dibanding konter biasa.</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
@@ -275,7 +284,7 @@ header('Content-Type: text/html; charset=utf-8');
         <div class="bg-emerald-900 text-white rounded-2xl p-6 md:p-8 text-center flex flex-col items-center">
             <i class="fa-solid fa-headset text-4xl text-amber-400 mb-3"></i>
             <h3 class="text-2xl font-bold mb-2">Butuh Bantuan Kendala Transaksi?</h3>
-            <p class="text-emerald-200 text-sm max-w-lg mb-6">Hubungi Tim CS PT MC Berkah Ilahi 09 jika ada hal yang ingin ditanyakan.</p>
+            <p class="text-emerald-200 text-sm max-w-lg mb-6">Hubungi Tim CS MC BERKAH ILAHI 09 agen jika ada hal yang ingin ditanyakan.</p>
             <a href="https://wa.me/6287790375321" target="_blank" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-xl transition shadow flex items-center gap-2 text-sm">
                 <i class="fa-brands fa-whatsapp text-lg"></i> Chat CS (0877-9037-5321)
             </a>
@@ -286,64 +295,73 @@ header('Content-Type: text/html; charset=utf-8');
     <footer class="mt-auto bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:text-left">
             <div class="mb-4 md:mb-0">
-                <p class="font-bold text-white">PT. MC BERKAH ILAHI 09</p>
+                <p class="font-bold text-white">MC BERKAH ILAHI 09 agen</p>
                 <p class="text-xs mt-1">Layanan Pengisian Digital & PPOB Terpercaya.</p>
             </div>
             <div class="text-xs">
-                <p>&copy; <?php echo date("Y"); ?> PT. MC Berkah Ilahi 09. All rights reserved.</p>
+                <p>&copy; <?php echo date("Y"); ?> MC BERKAH ILAHI 09 agen. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript Dynamic Logic -->
     <script>
-        // Data Produk Dipisah Per Layanan (Modal Server + Rp 1.500)
+        // Data Produk Dipisah Per Layanan
         const products = {
+            pulsa: [
+                { name: "Pulsa Reguler 5.000 (All Operator)", price: "Rp 6.500" },
+                { name: "Pulsa Reguler 10.000 (All Operator)", price: "Rp 11.500" },
+                { name: "Pulsa Reguler 15.000 (All Operator)", price: "Rp 16.500" },
+                { name: "Pulsa Reguler 20.000 (All Operator)", price: "Rp 21.500" },
+                { name: "Pulsa Reguler 25.000 (All Operator)", price: "Rp 26.500" },
+                { name: "Pulsa Reguler 50.000 (All Operator)", price: "Rp 51.500" },
+                { name: "Pulsa Reguler 100.000 (All Operator)", price: "Rp 101.500" }
+            ],
             dana: [
-                { name: "DNBA10 - Saldo DANA 10.000 Bebas Admin", price: "Rp 11.600" },
-                { name: "DNBA20 - Saldo DANA 20.000 Bebas Admin", price: "Rp 21.600" },
-                { name: "DNBA30 - Saldo DANA 30.000 Bebas Admin", price: "Rp 31.600" },
-                { name: "DNBA40 - Saldo DANA 40.000 Bebas Admin", price: "Rp 41.600" },
-                { name: "DNBA50 - Saldo DANA 50.000 Bebas Admin", price: "Rp 51.600" },
-                { name: "DNBA60 - Saldo DANA 60.000 Bebas Admin", price: "Rp 61.600" },
-                { name: "DNBA70 - Saldo DANA 70.000 Bebas Admin", price: "Rp 71.600" },
-                { name: "DNBA80 - Saldo DANA 80.000 Bebas Admin", price: "Rp 81.600" },
-                { name: "DNBA90 - Saldo DANA 90.000 Bebas Admin", price: "Rp 91.600" },
-                { name: "DNBA100 - Saldo DANA 100.000 Bebas Admin", price: "Rp 101.600" }
+                { name: "DNBA10 - Saldo DANA 10.000 Bebas Admin", price: "Rp 11.500" },
+                { name: "DNBA20 - Saldo DANA 20.000 Bebas Admin", price: "Rp 21.500" },
+                { name: "DNBA30 - Saldo DANA 30.000 Bebas Admin", price: "Rp 31.500" },
+                { name: "DNBA40 - Saldo DANA 40.000 Bebas Admin", price: "Rp 41.500" },
+                { name: "DNBA50 - Saldo DANA 50.000 Bebas Admin", price: "Rp 51.500" },
+                { name: "DNBA60 - Saldo DANA 60.000 Bebas Admin", price: "Rp 61.500" },
+                { name: "DNBA70 - Saldo DANA 70.000 Bebas Admin", price: "Rp 71.500" },
+                { name: "DNBA80 - Saldo DANA 80.000 Bebas Admin", price: "Rp 81.500" },
+                { name: "DNBA90 - Saldo DANA 90.000 Bebas Admin", price: "Rp 91.500" },
+                { name: "DNBA100 - Saldo DANA 100.000 Bebas Admin", price: "Rp 101.500" }
             ],
             ovo: [
-                { name: "OVO10 - Saldo OVO 10.000", price: "Rp 11.600" },
-                { name: "OVO20 - Saldo OVO 20.000", price: "Rp 21.600" },
-                { name: "OVO30 - Saldo OVO 30.000", price: "Rp 31.600" },
-                { name: "OVO50 - Saldo OVO 50.000", price: "Rp 51.600" },
-                { name: "OVO100 - Saldo OVO 100.000", price: "Rp 101.600" }
+                { name: "OVO10 - Saldo OVO 10.000", price: "Rp 11.500" },
+                { name: "OVO20 - Saldo OVO 20.000", price: "Rp 21.500" },
+                { name: "OVO30 - Saldo OVO 30.000", price: "Rp 31.500" },
+                { name: "OVO50 - Saldo OVO 50.000", price: "Rp 51.500" },
+                { name: "OVO100 - Saldo OVO 100.000", price: "Rp 101.500" }
             ],
             gopay: [
-                { name: "GOP10 - GoPay Customer 10.000", price: "Rp 11.600" },
-                { name: "GOP20 - GoPay Customer 20.000", price: "Rp 21.600" },
-                { name: "GOP30 - GoPay Customer 30.000", price: "Rp 31.600" },
-                { name: "GOP50 - GoPay Customer 50.000", price: "Rp 51.600" },
-                { name: "GOP100 - GoPay Customer 100.000", price: "Rp 101.600" }
+                { name: "GOP10 - GoPay Customer 10.000", price: "Rp 11.500" },
+                { name: "GOP20 - GoPay Customer 20.000", price: "Rp 21.500" },
+                { name: "GOP30 - GoPay Customer 30.000", price: "Rp 31.500" },
+                { name: "GOP50 - GoPay Customer 50.000", price: "Rp 51.500" },
+                { name: "GOP100 - GoPay Customer 100.000", price: "Rp 101.500" }
             ],
             shopeepay: [
-                { name: "SHO10 - ShopeePay 10.000", price: "Rp 11.600" },
-                { name: "SHO20 - ShopeePay 20.000", price: "Rp 21.600" },
-                { name: "SHO30 - ShopeePay 30.000", price: "Rp 31.600" },
-                { name: "SHO50 - ShopeePay 50.000", price: "Rp 51.600" },
-                { name: "SHO100 - ShopeePay 100.000", price: "Rp 101.600" }
+                { name: "SHO10 - ShopeePay 10.000", price: "Rp 11.500" },
+                { name: "SHO20 - ShopeePay 20.000", price: "Rp 21.500" },
+                { name: "SHO30 - ShopeePay 30.000", price: "Rp 31.500" },
+                { name: "SHO50 - ShopeePay 50.000", price: "Rp 51.500" },
+                { name: "SHO100 - ShopeePay 100.000", price: "Rp 101.500" }
             ],
             linkaja: [
-                { name: "LNK10 - LinkAja 10.000", price: "Rp 11.600" },
-                { name: "LNK20 - LinkAja 20.000", price: "Rp 21.600" },
-                { name: "LNK50 - LinkAja 50.000", price: "Rp 51.600" },
-                { name: "LNK100 - LinkAja 100.000", price: "Rp 101.600" }
+                { name: "LNK10 - LinkAja 10.000", price: "Rp 11.500" },
+                { name: "LNK20 - LinkAja 20.000", price: "Rp 21.500" },
+                { name: "LNK50 - LinkAja 50.000", price: "Rp 51.500" },
+                { name: "LNK100 - LinkAja 100.000", price: "Rp 101.500" }
             ],
             pln: [
-                { name: "PLN20 - Token PLN 20.000", price: "Rp 21.600" },
-                { name: "PLN50 - Token PLN 50.000", price: "Rp 51.600" },
-                { name: "PLN100 - Token PLN 100.000", price: "Rp 101.600" },
-                { name: "PLN200 - Token PLN 200.000", price: "Rp 201.600" },
-                { name: "PLN500 - Token PLN 500.000", price: "Rp 501.600" }
+                { name: "PLN20 - Token PLN 20.000", price: "Rp 21.500" },
+                { name: "PLN50 - Token PLN 50.000", price: "Rp 51.500" },
+                { name: "PLN100 - Token PLN 100.000", price: "Rp 101.500" },
+                { name: "PLN200 - Token PLN 200.000", price: "Rp 201.500" },
+                { name: "PLN500 - Token PLN 500.000", price: "Rp 501.500" }
             ],
             telkomsel: [
                 { name: "S5 - Telkomsel Reguler 5.000", price: "Rp 6.800" },
@@ -366,6 +384,17 @@ header('Content-Type: text/html; charset=utf-8');
                 { name: "XL25 - XL Reguler 25.000", price: "Rp 26.800" },
                 { name: "AX10 - Axis Reguler 10.000", price: "Rp 11.700" },
                 { name: "AX25 - Axis Reguler 25.000", price: "Rp 26.700" }
+            ],
+            tri: [
+                { name: "TRI5 - Tri Reguler 5.000", price: "Rp 6.500" },
+                { name: "TRI10 - Tri Reguler 10.000", price: "Rp 11.500" },
+                { name: "TRI25 - Tri Reguler 25.000", price: "Rp 26.500" },
+                { name: "TRI50 - Tri Reguler 50.000", price: "Rp 51.500" }
+            ],
+            smartfren: [
+                { name: "SM10 - Smartfren 10.000", price: "Rp 11.500" },
+                { name: "SM20 - Smartfren 20.000", price: "Rp 21.500" },
+                { name: "SM50 - Smartfren 50.000", price: "Rp 51.500" }
             ],
             ff: [
                 { name: "FF50 - Free Fire 50 Diamonds", price: "Rp 8.000" },
@@ -399,7 +428,7 @@ header('Content-Type: text/html; charset=utf-8');
         function switchTab(category) {
             currentCategory = category;
             
-            // Reset state style tab
+            // Reset style tab
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.className = "tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100";
             });
@@ -451,7 +480,7 @@ header('Content-Type: text/html; charset=utf-8');
             const payment = document.getElementById('payment_method').value;
 
             const adminWA = "6287790375321"; // Nomor WhatsApp CS
-            const message = `Halo Admin *PT. MC BERKAH ILAHI 09*, saya ingin melakukan pemesanan:%0A%0A` +
+            const message = `Halo Admin *MC BERKAH ILAHI 09 agen*, saya ingin melakukan pemesanan:%0A%0A` +
                             `• *Produk:* ${product}%0A` +
                             `• *No. Tujuan/ID:* ${number}%0A` +
                             `• *Metode Bayar:* ${payment}%0A%0A` +
