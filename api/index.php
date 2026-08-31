@@ -73,7 +73,7 @@ header('Content-Type: text/html; charset=utf-8');
             <div>
                 <span class="bg-emerald-600 text-emerald-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Lengkap & Ekonomis</span>
                 <h1 class="text-3xl md:text-5xl font-extrabold mt-3 leading-tight">Pengisian Produk Digital Instan & Terpercaya</h1>
-                <p class="mt-4 text-emerald-100 text-sm md:text-base">Pengisian E-Wallet, Paket Data GB All Operator, Pulsa, Token PLN, dan Voucher Game Cepat & Hemat.</p>
+                <p class="mt-4 text-emerald-100 text-sm md:text-base">Pengisian E-Wallet, Paket Data GB All Operator, Voucher Google Play, Roblox, dan Game Cepat & Hemat.</p>
                 <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
                     <a href="#layanan" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg transition text-sm">Transaksi Sekarang</a>
                 </div>
@@ -147,6 +147,12 @@ header('Content-Type: text/html; charset=utf-8');
                 <button onclick="switchTab('smartfren')" id="tab-smartfren" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-wifi text-base"></i> Smartfren GB
                 </button>
+                <button onclick="switchTab('roblox')" id="tab-roblox" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-cube text-base text-red-500"></i> Roblox
+                </button>
+                <button onclick="switchTab('googleplay')" id="tab-googleplay" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
+                    <i class="fa-brands fa-google-play text-base text-emerald-600"></i> Google Play
+                </button>
                 <button onclick="switchTab('ff')" id="tab-ff" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-fire text-base"></i> Free Fire
                 </button>
@@ -160,12 +166,12 @@ header('Content-Type: text/html; charset=utf-8');
 
             <form id="orderForm" onsubmit="handleOrder(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1" id="input-label">Nomor HP / Tujuan</label>
-                    <input type="text" id="target_number" required placeholder="Contoh: 082226238706" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1" id="input-label">Nomor HP / Username / ID</label>
+                    <input type="text" id="target_number" required placeholder="Contoh: 082226238706 / Username Roblox / Email" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Pilih Nominal / Paket Data GB</label>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Pilih Nominal / Produk</label>
                     <select id="product_select" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
                     </select>
                 </div>
@@ -192,14 +198,14 @@ header('Content-Type: text/html; charset=utf-8');
         <h3 class="text-xl font-bold text-center text-slate-800 mb-2 flex items-center justify-center">
             <i class="fa-solid fa-tags text-emerald-600 mr-2"></i> Daftar Harga Layanan Terbaik
         </h3>
-        <p class="text-xs text-center text-slate-500 mb-6">Harga hemat dan bersaing di pasaran untuk semua transaksi produk digital Anda.</p>
+        <p class="text-xs text-center text-slate-500 mb-6">Harga miring dan bersaing di pasaran untuk semua transaksi produk digital Anda.</p>
         
         <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden">
             <div class="overflow-x-auto">
                 <table class="w-full text-sm text-left text-slate-600">
                     <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b">
                         <tr>
-                            <th scope="col" class="px-6 py-3">Nama Produk / Paket Data</th>
+                            <th scope="col" class="px-6 py-3">Nama Produk / Nominal</th>
                             <th scope="col" class="px-6 py-3">Harga Pasaran</th>
                             <th scope="col" class="px-6 py-3">Harga Agen (Hemat)</th>
                         </tr>
@@ -220,7 +226,7 @@ header('Content-Type: text/html; charset=utf-8');
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4">1</div>
                 <h4 class="font-bold text-slate-800 mb-2">Pilih Layanan</h4>
-                <p class="text-xs text-slate-600">Pilih e-wallet, pulsa, atau paket kuota GB yang ingin diisi serta masukkan nomor tujuan.</p>
+                <p class="text-xs text-slate-600">Pilih e-wallet, paket GB, Roblox, atau Voucher Google Play yang ingin dibeli.</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4">2</div>
@@ -314,6 +320,19 @@ header('Content-Type: text/html; charset=utf-8');
                 { code: "SM5GB7D", name: "Smartfren Data 5 GB 7 Hari", pasaran: "Rp 20.000", price: 16800 },
                 { code: "SM9GB30D", name: "Smartfren Data 9 GB 30 Hari", pasaran: "Rp 35.000", price: 30000 }
             ],
+            roblox: [
+                { code: "RBX80", name: "Roblox 80 Robux", pasaran: "Rp 18.000", price: 14500 },
+                { code: "RBX160", name: "Roblox 160 Robux", pasaran: "Rp 35.000", price: 28500 },
+                { code: "RBX400", name: "Roblox 400 Robux", pasaran: "Rp 85.000", price: 69000 },
+                { code: "RBX800", name: "Roblox 800 Robux", pasaran: "Rp 165.000", price: 138000 }
+            ],
+            googleplay: [
+                { code: "GP5K", name: "Voucher Google Play Rp 5.000", pasaran: "Rp 7.000", price: 5500 },
+                { code: "GP10K", name: "Voucher Google Play Rp 10.000", pasaran: "Rp 13.000", price: 10800 },
+                { code: "GP20K", name: "Voucher Google Play Rp 20.000", pasaran: "Rp 23.000", price: 20500 },
+                { code: "GP50K", name: "Voucher Google Play Rp 50.000", pasaran: "Rp 56.000", price: 50800 },
+                { code: "GP100K", name: "Voucher Google Play Rp 100.000", pasaran: "Rp 110.000", price: 101000 }
+            ],
             ff: [
                 { code: "FF50", name: "Free Fire 50 Diamonds", pasaran: "Rp 10.000", price: 8000 }
             ],
@@ -385,7 +404,7 @@ header('Content-Type: text/html; charset=utf-8');
             const payment = document.getElementById('payment_method').value;
 
             const message = `Halo Admin MC BERKAH ILAHI 09 agen, saya ingin membeli paket data / produk digital:\n\n` +
-                            `*Tujuan*: ${target}\n` +
+                            `*Tujuan/ID*: ${target}\n` +
                             `*Produk*: ${product}\n` +
                             `*Metode Pembayaran*: ${payment}\n\n` +
                             `Mohon segara diproses. Terima kasih!`;
