@@ -9,7 +9,7 @@ header('Content-Type: text/html; charset=utf-8');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT. MC Berkah Ilahi 09 - Solusi Kebutuhan Digital Anda</title>
     <!-- Favicon / PP Web -->
-    <link rel="icon" type="image/jpeg" href="https://i.ibb.co.co/v6W9J12s/MCberkahilahi09.jpg">
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/v6W9J12s/MCberkahilahi09.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -25,7 +25,7 @@ header('Content-Type: text/html; charset=utf-8');
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
                     <!-- Logo / PP Web -->
-                    <img src="https://i.ibb.co.co/v6W9J12s/MCberkahilahi09.jpg" alt="Logo PT MC Berkah Ilahi 09" class="w-11 h-11 rounded-full object-cover border-2 border-amber-400 shadow">
+                    <img src="https://i.ibb.co/v6W9J12s/MCberkahilahi09.jpg" alt="Logo PT MC Berkah Ilahi 09" class="w-11 h-11 rounded-full object-cover border-2 border-amber-400 shadow">
                     <div>
                         <span class="font-bold text-lg sm:text-xl tracking-tight block leading-none">PT. MC BERKAH ILAHI 09</span>
                         <span class="text-xs text-emerald-200">Amanah, Unggul, Terpercaya</span>
@@ -80,7 +80,7 @@ header('Content-Type: text/html; charset=utf-8');
             <div class="hidden md:flex justify-center">
                 <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl w-full max-w-sm text-center">
                     <!-- Display Logo / PP di Card Banner -->
-                    <img src="https://i.ibb.co.co/v6W9J12s/MCberkahilahi09.jpg" alt="Logo PT MC Berkah Ilahi 09" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-amber-400 shadow-lg object-cover">
+                    <img src="https://i.ibb.co/v6W9J12s/MCberkahilahi09.jpg" alt="Logo PT MC Berkah Ilahi 09" class="w-24 h-24 rounded-full mx-auto mb-3 border-4 border-amber-400 shadow-lg object-cover">
                     <h4 class="font-bold text-base text-white">PT. MC BERKAH ILAHI 09</h4>
                     <p class="text-xs text-amber-300 font-medium mb-3">Amanah, Unggul, Terpercaya</p>
                     <hr class="border-white/10 my-3">
