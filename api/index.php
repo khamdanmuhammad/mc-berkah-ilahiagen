@@ -47,7 +47,7 @@ header('Content-Type: text/html; charset=utf-8');
                 </div>
 
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-emerald-600 focus:outline-none">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 rounded-md hover:bg-emerald-600 focus:outline-none">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -73,7 +73,7 @@ header('Content-Type: text/html; charset=utf-8');
             <div>
                 <span class="bg-emerald-600 text-emerald-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Lengkap & Ekonomis</span>
                 <h1 class="text-3xl md:text-5xl font-extrabold mt-3 leading-tight">Pengisian Produk Digital Instan & Terpercaya</h1>
-                <p class="mt-4 text-emerald-100 text-sm md:text-base">Pengisian E-Wallet, Pulsa All Operator, Token PLN, dan Voucher Game Cepat & Hemat.</p>
+                <p class="mt-4 text-emerald-100 text-sm md:text-base">Pengisian E-Wallet, Paket Data GB All Operator, Pulsa, Token PLN, dan Voucher Game Cepat & Hemat.</p>
                 <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
                     <a href="#layanan" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg transition text-sm">Transaksi Sekarang</a>
                 </div>
@@ -124,7 +124,7 @@ header('Content-Type: text/html; charset=utf-8');
                     <i class="fa-solid fa-bolt text-base"></i> Token PLN
                 </button>
                 <button onclick="switchTab('telkomsel')" id="tab-telkomsel" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-signal text-base"></i> Telkomsel
+                    <i class="fa-solid fa-signal text-base"></i> Telkomsel GB
                 </button>
                 <button onclick="switchTab('tsel_promo')" id="tab-tsel_promo" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-fire-flame-curved text-base"></i> Tsel Merdeka
@@ -136,16 +136,16 @@ header('Content-Type: text/html; charset=utf-8');
                     <i class="fa-solid fa-bolt-lightning text-base"></i> Tsel Flash
                 </button>
                 <button onclick="switchTab('indosat')" id="tab-indosat" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-tower-cell text-base"></i> Indosat IM3
+                    <i class="fa-solid fa-tower-cell text-base"></i> Indosat GB
                 </button>
                 <button onclick="switchTab('xl_axis')" id="tab-xl_axis" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-sim-card text-base"></i> XL / Axis
+                    <i class="fa-solid fa-sim-card text-base"></i> XL / Axis GB
                 </button>
                 <button onclick="switchTab('tri')" id="tab-tri" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-3 text-base"></i> Tri (3)
+                    <i class="fa-solid fa-3 text-base"></i> Tri GB
                 </button>
                 <button onclick="switchTab('smartfren')" id="tab-smartfren" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-wifi text-base"></i> Smartfren
+                    <i class="fa-solid fa-wifi text-base"></i> Smartfren GB
                 </button>
                 <button onclick="switchTab('ff')" id="tab-ff" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-fire text-base"></i> Free Fire
@@ -160,12 +160,12 @@ header('Content-Type: text/html; charset=utf-8');
 
             <form id="orderForm" onsubmit="handleOrder(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1" id="input-label">Nomor HP DANA</label>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1" id="input-label">Nomor HP / Tujuan</label>
                     <input type="text" id="target_number" required placeholder="Contoh: 082226238706" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Pilih Nominal / Produk</label>
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Pilih Nominal / Paket Data GB</label>
                     <select id="product_select" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
                     </select>
                 </div>
@@ -199,37 +199,12 @@ header('Content-Type: text/html; charset=utf-8');
                 <table class="w-full text-sm text-left text-slate-600">
                     <thead class="text-xs text-slate-700 uppercase bg-slate-100 border-b">
                         <tr>
-                            <th scope="col" class="px-6 py-3">Nama Produk / Nominal</th>
+                            <th scope="col" class="px-6 py-3">Nama Produk / Paket Data</th>
                             <th scope="col" class="px-6 py-3">Harga Pasaran</th>
                             <th scope="col" class="px-6 py-3">Harga Agen (Hemat)</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-slate-100">
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Saldo DANA 10.000 (DNBA10)</td>
-                            <td class="px-6 py-4 text-slate-400 line-through">Rp 13.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 11.500</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Saldo DANA 20.000 (DNBA20)</td>
-                            <td class="px-6 py-4 text-slate-400 line-through">Rp 23.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 21.500</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Pulsa All Operator 10.000</td>
-                            <td class="px-6 py-4 text-slate-400 line-through">Rp 13.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 11.500</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Token PLN 20.000</td>
-                            <td class="px-6 py-4 text-slate-400 line-through">Rp 23.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 21.500</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Telkomsel Reguler 10.000</td>
-                            <td class="px-6 py-4 text-slate-400 line-through">Rp 13.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 11.800</td>
-                        </tr>
+                    <tbody id="price-table-body" class="divide-y divide-slate-100">
                     </tbody>
                 </table>
             </div>
@@ -245,288 +220,184 @@ header('Content-Type: text/html; charset=utf-8');
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4">1</div>
                 <h4 class="font-bold text-slate-800 mb-2">Pilih Layanan</h4>
-                <p class="text-xs text-slate-600">Pilih e-wallet, pulsa, atau game yang ingin diisi serta masukkan nomor tujuan.</p>
+                <p class="text-xs text-slate-600">Pilih e-wallet, pulsa, atau paket kuota GB yang ingin diisi serta masukkan nomor tujuan.</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4">2</div>
-                <h4 class="font-bold text-slate-800 mb-2">Transfer Pembayaran</h4>
-                <p class="text-xs text-slate-600">Bayar ke <strong>SeaBank 901177614946</strong> atau metode QRIS yang dipilih.</p>
+                <h4 class="font-bold text-slate-800 mb-2">Pilih Pembayaran</h4>
+                <p class="text-xs text-slate-600">Pilih metode pembayaran seperti SeaBank, QRIS, atau Transfer Bank.</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4">3</div>
-                <h4 class="font-bold text-slate-800 mb-2">Proses Instan</h4>
-                <p class="text-xs text-slate-600">Produk diproses otomatis dan masuk secara cepat ke nomor tujuan Anda.</p>
+                <h4 class="font-bold text-slate-800 mb-2">Konfirmasi WA</h4>
+                <p class="text-xs text-slate-600">Kirim format transaksi otomatis ke WhatsApp admin dan pengisian segera diproses.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Keunggulan Section -->
-    <section id="keunggulan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 mb-12">
-        <h3 class="text-xl font-bold text-center text-slate-800 mb-8">Mengapa Memilih MC BERKAH ILAHI 09 agen?</h3>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-                <h4 class="font-bold text-slate-800 mb-2">Proses Kilat</h4>
-                <p class="text-xs text-slate-600">Transaksi diproses secara langsung oleh sistem otomatis.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                    <i class="fa-solid fa-tag"></i>
-                </div>
-                <h4 class="font-bold text-slate-800 mb-2">Paling Hemat</h4>
-                <p class="text-xs text-slate-600">Harga produk ekonomis dan tetap bersaing dibanding konter biasa.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-                <h4 class="font-bold text-slate-800 mb-2">CS Siap Membantu</h4>
-                <p class="text-xs text-slate-600">Customer Service sigap membantu setiap kendala transaksi Anda.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Bantuan / Kontak -->
-    <section id="kontak" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-12">
-        <div class="bg-emerald-900 text-white rounded-2xl p-6 md:p-8 text-center flex flex-col items-center">
-            <i class="fa-solid fa-headset text-4xl text-amber-400 mb-3"></i>
-            <h3 class="text-2xl font-bold mb-2">Butuh Bantuan Kendala Transaksi?</h3>
-            <p class="text-emerald-200 text-sm max-w-lg mb-6">Hubungi Tim CS MC BERKAH ILAHI 09 agen jika ada hal yang ingin ditanyakan.</p>
-            <a href="https://wa.me/6287790375321" target="_blank" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-xl transition shadow flex items-center gap-2 text-sm">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Chat CS (0877-9037-5321)
-            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="mt-auto bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:text-left">
-            <div class="mb-4 md:mb-0">
-                <p class="font-bold text-white">MC BERKAH ILAHI 09 agen</p>
-                <p class="text-xs mt-1">Layanan Pengisian Digital & PPOB Terpercaya.</p>
-            </div>
-            <div class="text-xs">
-                <p>&copy; <?php echo date("Y"); ?> MC BERKAH ILAHI 09 agen. All rights reserved.</p>
-            </div>
+    <footer class="bg-slate-900 text-slate-400 py-8 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs">
+            <p>&copy; <?php echo date('Y'); ?> MC BERKAH ILAHI 09 agen. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript Dynamic Logic -->
     <script>
-        // Data Produk Dipisah Per Layanan (Termasuk Data Flash yang Ditambahkan)
-        const products = {
-            pulsa: [
-                { name: "Pulsa Reguler 5.000 (All Operator)", price: "Rp 6.500" },
-                { name: "Pulsa Reguler 10.000 (All Operator)", price: "Rp 11.500" },
-                { name: "Pulsa Reguler 15.000 (All Operator)", price: "Rp 16.500" },
-                { name: "Pulsa Reguler 20.000 (All Operator)", price: "Rp 21.500" },
-                { name: "Pulsa Reguler 25.000 (All Operator)", price: "Rp 26.500" },
-                { name: "Pulsa Reguler 50.000 (All Operator)", price: "Rp 51.500" },
-                { name: "Pulsa Reguler 100.000 (All Operator)", price: "Rp 101.500" }
-            ],
+        const productsData = {
             dana: [
-                { name: "DNBA10 - Saldo DANA 10.000 Bebas Admin", price: "Rp 11.500" },
-                { name: "DNBA20 - Saldo DANA 20.000 Bebas Admin", price: "Rp 21.500" },
-                { name: "DNBA30 - Saldo DANA 30.000 Bebas Admin", price: "Rp 31.500" },
-                { name: "DNBA40 - Saldo DANA 40.000 Bebas Admin", price: "Rp 41.500" },
-                { name: "DNBA50 - Saldo DANA 50.000 Bebas Admin", price: "Rp 51.500" },
-                { name: "DNBA60 - Saldo DANA 60.000 Bebas Admin", price: "Rp 61.500" },
-                { name: "DNBA70 - Saldo DANA 70.000 Bebas Admin", price: "Rp 71.500" },
-                { name: "DNBA80 - Saldo DANA 80.000 Bebas Admin", price: "Rp 81.500" },
-                { name: "DNBA90 - Saldo DANA 90.000 Bebas Admin", price: "Rp 91.500" },
-                { name: "DNBA100 - Saldo DANA 100.000 Bebas Admin", price: "Rp 101.500" }
+                { code: "DNBA10", name: "Saldo DANA 10.000", pasaran: "Rp 13.000", price: 11500 },
+                { code: "DNBA20", name: "Saldo DANA 20.000", pasaran: "Rp 23.000", price: 21500 }
+            ],
+            pulsa: [
+                { code: "P10", name: "Pulsa Regular 10.000", pasaran: "Rp 13.000", price: 11500 },
+                { code: "P20", name: "Pulsa Regular 20.000", pasaran: "Rp 23.000", price: 21500 }
             ],
             ovo: [
-                { name: "OVO10 - Saldo OVO 10.000", price: "Rp 11.500" },
-                { name: "OVO20 - Saldo OVO 20.000", price: "Rp 21.500" },
-                { name: "OVO30 - Saldo OVO 30.000", price: "Rp 31.500" },
-                { name: "OVO50 - Saldo OVO 50.000", price: "Rp 51.500" },
-                { name: "OVO100 - Saldo OVO 100.000", price: "Rp 101.500" }
+                { code: "OVO10", name: "Saldo OVO 10.000", pasaran: "Rp 13.000", price: 11500 }
             ],
             gopay: [
-                { name: "GOP10 - GoPay Customer 10.000", price: "Rp 11.500" },
-                { name: "GOP20 - GoPay Customer 20.000", price: "Rp 21.500" },
-                { name: "GOP30 - GoPay Customer 30.000", price: "Rp 31.500" },
-                { name: "GOP50 - GoPay Customer 50.000", price: "Rp 51.500" },
-                { name: "GOP100 - GoPay Customer 100.000", price: "Rp 101.500" }
+                { code: "GOPAY10", name: "Saldo GoPay 10.000", pasaran: "Rp 13.000", price: 11500 }
             ],
             shopeepay: [
-                { name: "SHO10 - ShopeePay 10.000", price: "Rp 11.500" },
-                { name: "SHO20 - ShopeePay 20.000", price: "Rp 21.500" },
-                { name: "SHO30 - ShopeePay 30.000", price: "Rp 31.500" },
-                { name: "SHO50 - ShopeePay 50.000", price: "Rp 51.500" },
-                { name: "SHO100 - ShopeePay 100.000", price: "Rp 101.500" }
+                { code: "SPAY10", name: "Saldo ShopeePay 10.000", pasaran: "Rp 13.000", price: 11500 }
             ],
             linkaja: [
-                { name: "LNK10 - LinkAja 10.000", price: "Rp 11.500" },
-                { name: "LNK20 - LinkAja 20.000", price: "Rp 21.500" },
-                { name: "LNK50 - LinkAja 50.000", price: "Rp 51.500" },
-                { name: "LNK100 - LinkAja 100.000", price: "Rp 101.500" }
+                { code: "LA10", name: "Saldo LinkAja 10.000", pasaran: "Rp 13.000", price: 11500 }
             ],
             pln: [
-                { name: "PLN20 - Token PLN 20.000", price: "Rp 21.500" },
-                { name: "PLN50 - Token PLN 50.000", price: "Rp 51.500" },
-                { name: "PLN100 - Token PLN 100.000", price: "Rp 101.500" },
-                { name: "PLN200 - Token PLN 200.000", price: "Rp 201.500" },
-                { name: "PLN500 - Token PLN 500.000", price: "Rp 501.500" }
+                { code: "PLN20", name: "Token PLN 20.000", pasaran: "Rp 23.000", price: 21500 }
             ],
             telkomsel: [
-                { name: "S5 - Telkomsel Reguler 5.000", price: "Rp 6.800" },
-                { name: "S10 - Telkomsel Reguler 10.000", price: "Rp 11.800" },
-                { name: "S15 - Telkomsel Reguler 15.000", price: "Rp 16.800" },
-                { name: "S20 - Telkomsel Reguler 20.000", price: "Rp 21.800" },
-                { name: "S25 - Telkomsel Reguler 25.000", price: "Rp 26.800" },
-                { name: "S50 - Telkomsel Reguler 50.000", price: "Rp 51.800" },
-                { name: "S100 - Telkomsel Reguler 100.000", price: "Rp 101.800" }
+                { code: "SBH2", name: "Telkomsel Data 2.5 GB 5 Hari", pasaran: "Rp 16.000", price: 13400 },
+                { code: "SBH3", name: "Telkomsel Data 3 GB 5 Hari", pasaran: "Rp 17.500", price: 14650 },
+                { code: "SBH5", name: "Telkomsel Data 5 GB 7 Hari", pasaran: "Rp 26.000", price: 22500 },
+                { code: "SBH7", name: "Telkomsel Data 7 GB 7 Hari", pasaran: "Rp 35.000", price: 30100 },
+                { code: "SBP3", name: "Telkomsel Data Flash 3 GB 28 Hari", pasaran: "Rp 36.000", price: 31550 },
+                { code: "SBP5", name: "Telkomsel Data Flash 5 GB 28 Hari", pasaran: "Rp 49.000", price: 43050 }
             ],
             tsel_promo: [
-                { name: "SBP3 - Telkomsel Data Flash 3GB 28Hr", price: "Rp 31.550" },
-                { name: "SBP4 - Telkomsel Data Flash 4GB 28Hr", price: "Rp 41.750" },
-                { name: "SBP5 - Telkomsel Data Flash 5GB 28Hr", price: "Rp 43.050" },
-                { name: "SBL3 - Data Flash Promo Merdeka 3GB 24 Jam 28Hr", price: "Rp 31.750" },
-                { name: "SBL4 - Data Flash Promo Merdeka 4GB 24 Jam 28Hr", price: "Rp 40.350" },
-                { name: "SBL5 - Data Flash Promo Merdeka 5GB 24 Jam 28Hr", price: "Rp 43.600" },
-                { name: "SBL6 - Data Flash Promo Merdeka 6GB 24 Jam 28Hr", price: "Rp 48.600" },
-                { name: "SBL7 - Data Flash Promo Merdeka 7GB 24 Jam 28Hr", price: "Rp 49.850" },
-                { name: "SBL8 - Data Flash Promo Merdeka 8GB 24 Jam 28Hr", price: "Rp 51.450" },
-                { name: "SBL9 - Data Flash Promo Merdeka 9GB 24 Jam 28Hr", price: "Rp 58.950" }
+                { code: "SBL3", name: "Data Flash Promo 3 GB 24 Jam 28 Hari", pasaran: "Rp 36.000", price: 31750 },
+                { code: "SBL4", name: "Data Flash Promo 4 GB 24 Jam 28 Hari", pasaran: "Rp 45.000", price: 40350 },
+                { code: "SBL5", name: "Data Flash Promo 5 GB 24 Jam 28 Hari", pasaran: "Rp 49.000", price: 43600 },
+                { code: "SBL7", name: "Data Flash Promo 7 GB 24 Jam 28 Hari", pasaran: "Rp 56.000", price: 49850 }
             ],
             tsel_harian: [
-                { name: "SBH2 - Data Flash Harian 2.5GB 5Hari", price: "Rp 13.400" },
-                { name: "SBH3 - Data Flash Harian 3GB 5Hari", price: "Rp 14.650" },
-                { name: "SBH7 - Data Flash Harian 7GB 7Hari", price: "Rp 30.100" }
+                { code: "SBH2", name: "Data Flash Harian 2.5 GB 5 Hari", pasaran: "Rp 16.000", price: 13400 },
+                { code: "SBH3", name: "Data Flash Harian 3 GB 5 Hari", pasaran: "Rp 17.500", price: 14650 },
+                { code: "SBH5", name: "Data Flash Harian 5 GB 7 Hari", pasaran: "Rp 26.000", price: 22500 },
+                { code: "SBH7", name: "Data Flash Harian 7 GB 7 Hari", pasaran: "Rp 35.000", price: 30100 }
             ],
             tsel_flash: [
-                { name: "SB100 - Telkomsel Data Flash 100MB 7Hr", price: "Rp 3.850" },
-                { name: "SB250 - Telkomsel Data Flash 250MB 7Hr", price: "Rp 5.500" },
-                { name: "SB500 - Telkomsel Data Flash 500MB 15Hr", price: "Rp 7.450" },
-                { name: "SB750 - Telkomsel Data Flash 750MB 7Hr", price: "Rp 11.950" },
-                { name: "SB1 - Telkomsel Data Flash 1GB 28Hr", price: "Rp 12.900" },
-                { name: "SB2 - Telkomsel Data Flash 2GB 28Hr", price: "Rp 22.400" },
-                { name: "SB10 - Telkomsel Data Flash 10GB 30Hr", price: "Rp 65.000" },
-                { name: "SB15 - Telkomsel Data Flash 15GB 30Hr", price: "Rp 87.000" }
+                { code: "SB100", name: "Telkomsel Flash 100 MB 7 Hari", pasaran: "Rp 5.000", price: 3850 },
+                { code: "SB1", name: "Telkomsel Flash 1 GB 28 Hari", pasaran: "Rp 15.000", price: 12900 }
             ],
             indosat: [
-                { name: "I5 - Indosat Reguler 5.000", price: "Rp 6.700" },
-                { name: "I10 - Indosat Reguler 10.000", price: "Rp 11.700" },
-                { name: "I25 - Indosat Reguler 25.000", price: "Rp 26.700" },
-                { name: "I50 - Indosat Reguler 50.000", price: "Rp 51.700" },
-                { name: "I100 - Indosat Reguler 100.000", price: "Rp 101.700" }
+                { code: "ID2GB3D", name: "Indosat Freedom 2 GB 3 Hari", pasaran: "Rp 12.000", price: 9800 },
+                { code: "ID5GB7D", name: "Indosat Freedom 5 GB 7 Hari", pasaran: "Rp 23.000", price: 19500 },
+                { code: "ID7GB7D", name: "Indosat Freedom 7 GB 7 Hari", pasaran: "Rp 30.000", price: 25500 },
+                { code: "ID10GB30D", name: "Indosat Freedom 10 GB 30 Hari", pasaran: "Rp 45.000", price: 38500 }
             ],
             xl_axis: [
-                { name: "XL10 - XL Reguler 10.000", price: "Rp 11.800" },
-                { name: "XL25 - XL Reguler 25.000", price: "Rp 26.800" },
-                { name: "AX10 - Axis Reguler 10.000", price: "Rp 11.700" },
-                { name: "AX25 - Axis Reguler 25.000", price: "Rp 26.700" }
+                { code: "XL2GB3D", name: "XL / Axis Extra Combo 2 GB 3 Hari", pasaran: "Rp 11.000", price: 9200 },
+                { code: "XL5GB7D", name: "XL / Axis Extra Combo 5 GB 7 Hari", pasaran: "Rp 22.000", price: 18500 },
+                { code: "XL7GB7D", name: "XL / Axis Extra Combo 7 GB 7 Hari", pasaran: "Rp 29.000", price: 24000 },
+                { code: "XL10GB30D", name: "XL / Axis Extra Combo 10 GB 30 Hari", pasaran: "Rp 44.000", price: 37500 }
             ],
             tri: [
-                { name: "TRI5 - Tri Reguler 5.000", price: "Rp 6.500" },
-                { name: "TRI10 - Tri Reguler 10.000", price: "Rp 11.500" },
-                { name: "TRI25 - Tri Reguler 25.000", price: "Rp 26.500" },
-                { name: "TRI50 - Tri Reguler 50.000", price: "Rp 51.500" }
+                { code: "TRI2GB3D", name: "Tri Happy 2 GB 3 Hari", pasaran: "Rp 10.000", price: 8500 },
+                { code: "TRI5GB7D", name: "Tri Happy 5 GB 7 Hari", pasaran: "Rp 21.000", price: 17500 },
+                { code: "TRI7GB7D", name: "Tri Happy 7 GB 7 Hari", pasaran: "Rp 28.000", price: 23000 },
+                { code: "TRI10GB30D", name: "Tri Happy 10 GB 30 Hari", pasaran: "Rp 42.000", price: 35500 }
             ],
             smartfren: [
-                { name: "SM10 - Smartfren 10.000", price: "Rp 11.500" },
-                { name: "SM20 - Smartfren 20.000", price: "Rp 21.500" },
-                { name: "SM50 - Smartfren 50.000", price: "Rp 51.500" }
+                { code: "SM3GB7D", name: "Smartfren Data 3 GB 7 Hari", pasaran: "Rp 15.000", price: 12500 },
+                { code: "SM5GB7D", name: "Smartfren Data 5 GB 7 Hari", pasaran: "Rp 20.000", price: 16800 },
+                { code: "SM9GB30D", name: "Smartfren Data 9 GB 30 Hari", pasaran: "Rp 35.000", price: 30000 }
             ],
             ff: [
-                { name: "FF50 - Free Fire 50 Diamonds", price: "Rp 8.000" },
-                { name: "FF140 - Free Fire 140 Diamonds", price: "Rp 20.000" },
-                { name: "FF355 - Free Fire 355 Diamonds", price: "Rp 49.500" },
-                { name: "FF720 - Free Fire 720 Diamonds", price: "Rp 98.000" }
+                { code: "FF50", name: "Free Fire 50 Diamonds", pasaran: "Rp 10.000", price: 8000 }
             ],
             mlbb: [
-                { name: "ML44 - Mobile Legends 44 Diamonds", price: "Rp 13.000" },
-                { name: "ML86 - Mobile Legends 86 Diamonds", price: "Rp 23.000" },
-                { name: "ML172 - Mobile Legends 172 Diamonds", price: "Rp 45.000" },
-                { name: "ML257 - Mobile Legends 257 Diamonds", price: "Rp 67.000" }
+                { code: "ML85", name: "Mobile Legends 85 Diamonds", pasaran: "Rp 25.000", price: 22000 }
             ],
             perdana: [
-                { name: "APSN3 - Aktivasi Perdana Telkomsel 3GB 30 Hari", price: "Rp 22.850" },
-                { name: "Aktivasi Perdana Telkomsel 5GB 30 Hari", price: "Rp 32.000" },
-                { name: "Aktivasi Perdana Indosat IM3 3GB 30 Hari", price: "Rp 22.000" }
+                { code: "ACT1", name: "Aktivasi Perdana Internet 3 GB", pasaran: "Rp 18.000", price: 15000 }
             ]
         };
 
-        let currentCategory = 'dana';
+        let currentTab = 'dana';
+
+        function renderProducts(tabKey) {
+            const selectEl = document.getElementById('product_select');
+            selectEl.innerHTML = '';
+            const items = productsData[tabKey] || [];
+            
+            items.forEach(item => {
+                const opt = document.createElement('option');
+                opt.value = `${item.name} (${item.code}) - Rp ${item.price.toLocaleString('id-ID')}`;
+                opt.textContent = `${item.name} (${item.code}) - Rp ${item.price.toLocaleString('id-ID')}`;
+                selectEl.appendChild(opt);
+            });
+        }
+
+        function renderPriceTable() {
+            const tbody = document.getElementById('price-table-body');
+            tbody.innerHTML = '';
+            
+            Object.keys(productsData).forEach(key => {
+                productsData[key].forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td class="px-6 py-4 font-semibold text-slate-800">${item.name} (${item.code})</td>
+                        <td class="px-6 py-4 text-slate-400 line-through">${item.pasaran}</td>
+                        <td class="px-6 py-4 font-bold text-emerald-600">Rp ${item.price.toLocaleString('id-ID')}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            });
+        }
+
+        function switchTab(tabKey) {
+            currentTab = tabKey;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-500', 'border-2');
+                btn.classList.add('bg-slate-50', 'text-slate-600', 'border-slate-200');
+            });
+
+            const activeBtn = document.getElementById(`tab-${tabKey}`);
+            if(activeBtn) {
+                activeBtn.classList.add('active', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-500', 'border-2');
+                activeBtn.classList.remove('bg-slate-50', 'text-slate-600', 'border-slate-200');
+            }
+
+            renderProducts(tabKey);
+        }
 
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         }
 
-        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
-
-        // Switch Kategori Spesifik
-        function switchTab(category) {
-            currentCategory = category;
-
-            // Reset style semua button tab
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-500', 'border-2');
-                btn.classList.add('bg-slate-50', 'text-slate-600', 'border-slate-200');
-            });
-
-            // Set style active pada button yang dipilih
-            const activeBtn = document.getElementById(`tab-${category}`);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-slate-50', 'text-slate-600', 'border-slate-200');
-                activeBtn.classList.add('active', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-500', 'border-2');
-            }
-
-            // Update Label Input sesuai kategori
-            const inputLabel = document.getElementById('input-label');
-            const targetInput = document.getElementById('target_number');
-            
-            if (['ff', 'mlbb'].includes(category)) {
-                inputLabel.innerText = "ID Game / User ID";
-                targetInput.placeholder = "Contoh: 12345678 (1234)";
-            } else if (category === 'pln') {
-                inputLabel.innerText = "Nomor Meter / ID Pelanggan PLN";
-                targetInput.placeholder = "Contoh: 56123456789";
-            } else {
-                inputLabel.innerText = `Nomor HP ${category.toUpperCase().replace('_', ' ')}`;
-                targetInput.placeholder = "Contoh: 082226238706";
-            }
-
-            // Render opsi produk pada select dropdown
-            const select = document.getElementById('product_select');
-            select.innerHTML = '';
-            
-            if (products[category]) {
-                products[category].forEach(item => {
-                    const option = document.createElement('option');
-                    option.value = `${item.name} - ${item.price}`;
-                    option.textContent = `${item.name} (${item.price})`;
-                    select.appendChild(option);
-                });
-            }
-        }
-
-        // Handle Submit Pemesanan ke WhatsApp
         function handleOrder(e) {
             e.preventDefault();
-            const number = document.getElementById('target_number').value;
+            const target = document.getElementById('target_number').value;
             const product = document.getElementById('product_select').value;
             const payment = document.getElementById('payment_method').value;
 
-            const message = `*HALO CS MC BERKAH ILAHI 09 AGEN*%0A%0A` +
-                `Saya mau order produk berikut:%0A` +
-                `• *Layanan*: ${currentCategory.toUpperCase().replace('_', ' ')}%0A` +
-                `• *Produk*: ${product}%0A` +
-                `• *Nomor Tujuan/ID*: ${number}%0A` +
-                `• *Metode Bayar*: ${payment}%0A%0A` +
-                `Mohon segera diproses, terima kasih!`;
+            const message = `Halo Admin MC BERKAH ILAHI 09 agen, saya ingin membeli paket data / produk digital:\n\n` +
+                            `*Tujuan*: ${target}\n` +
+                            `*Produk*: ${product}\n` +
+                            `*Metode Pembayaran*: ${payment}\n\n` +
+                            `Mohon segara diproses. Terima kasih!`;
 
-            window.open(`https://wa.me/6287790375321?text=${message}`, '_blank');
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/6287790375321?text=${encodedMessage}`, '_blank');
         }
 
-        // Inisialisasi awal saat halaman dimuat
+        // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
-            switchTab('dana');
+            renderProducts('dana');
+            renderPriceTable();
         });
     </script>
 </body>
