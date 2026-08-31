@@ -37,6 +37,7 @@ header('Content-Type: text/html; charset=utf-8');
                     <a href="#layanan" class="hover:text-emerald-200 transition">Layanan</a>
                     <a href="#harga" class="hover:text-emerald-200 transition">Cek Harga</a>
                     <a href="#cara-order" class="hover:text-emerald-200 transition">Cara Transaksi</a>
+                    <a href="#keunggulan" class="hover:text-emerald-200 transition">Keunggulan</a>
                     <a href="#kontak" class="hover:text-emerald-200 transition">Bantuan</a>
                 </nav>
 
@@ -59,6 +60,7 @@ header('Content-Type: text/html; charset=utf-8');
             <a href="#layanan" onclick="toggleMobileMenu()" class="block py-2 hover:text-emerald-200">Layanan</a>
             <a href="#harga" onclick="toggleMobileMenu()" class="block py-2 hover:text-emerald-200">Cek Harga</a>
             <a href="#cara-order" onclick="toggleMobileMenu()" class="block py-2 hover:text-emerald-200">Cara Transaksi</a>
+            <a href="#keunggulan" onclick="toggleMobileMenu()" class="block py-2 hover:text-emerald-200">Keunggulan</a>
             <a href="#kontak" onclick="toggleMobileMenu()" class="block py-2 hover:text-emerald-200">Bantuan</a>
             <a href="https://wa.me/6287790375321" target="_blank" class="inline-block w-full text-center bg-amber-400 text-slate-900 font-semibold py-2 rounded-lg mt-2">
                 <i class="fa-brands fa-whatsapp mr-1"></i> Hubungi CS
@@ -71,7 +73,7 @@ header('Content-Type: text/html; charset=utf-8');
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left grid md:grid-cols-2 gap-8 items-center">
             <div>
                 <span class="bg-emerald-600 text-emerald-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Serba Cepat & Murah</span>
-                <h1 class="text-3xl md:text-5xl font-extrabold mt-3 leading-tight">Isi Pulsa, Kuota, & Token PLN Tanpa Ribet</h1>
+                <h1 class="text-3xl md:text-5xl font-extrabold mt-3 leading-tight">Isi Pulsa, Game, E-Wallet & Token PLN Tanpa Ribet</h1>
                 <p class="mt-4 text-emerald-100 text-sm md:text-base">Layanan pengisian otomatis 24 jam dengan harga agen paling kompetitif. Proses instan dan aman.</p>
                 <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
                     <a href="#layanan" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg transition text-sm">Transaksi Sekarang</a>
@@ -100,25 +102,38 @@ header('Content-Type: text/html; charset=utf-8');
                 <i class="fa-solid fa-cart-shopping text-emerald-600 mr-2"></i> Form Pemesanan Instan
             </h2>
 
+            <!-- Kategori Pilihan Produk -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
-                <button onclick="switchTab('pulsa')" id="tab-pulsa" class="tab-btn active bg-emerald-50 text-emerald-700 border-emerald-500 border-2 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition">
-                    <i class="fa-solid fa-mobile-screen"></i> Pulsa
+                <button onclick="switchTab('pulsa')" id="tab-pulsa" class="tab-btn active bg-emerald-50 text-emerald-700 border-emerald-500 border-2 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition">
+                    <i class="fa-solid fa-mobile-screen"></i> Pulsa & Data
                 </button>
-                <button onclick="switchTab('paket')" id="tab-paket" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-wifi"></i> Paket Data
+                <button onclick="switchTab('ewallet')" id="tab-ewallet" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-wallet"></i> E-Wallet
                 </button>
-                <button onclick="switchTab('ewallet')" id="tab-ewallet" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-wallet"></i> Topup E-Wallet
+                <button onclick="switchTab('game')" id="tab-game" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-gamepad"></i> Voucher Game
                 </button>
-                <button onclick="switchTab('pln')" id="tab-pln" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition hover:bg-slate-100">
+                <button onclick="switchTab('perdana')" id="tab-perdana" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-sim-card"></i> Aktv. Perdana
+                </button>
+                <button onclick="switchTab('pln')" id="tab-pln" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition hover:bg-slate-100">
                     <i class="fa-solid fa-bolt"></i> Token PLN
+                </button>
+                <button onclick="switchTab('voucher_fisik')" id="tab-voucher_fisik" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-receipt"></i> Voucher Data
+                </button>
+                <button onclick="switchTab('nelpon')" id="tab-nelpon" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-phone"></i> Nelpon & SMS
+                </button>
+                <button onclick="switchTab('digital')" id="tab-digital" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition hover:bg-slate-100">
+                    <i class="fa-brands fa-google-play"></i> Voucher Digital
                 </button>
             </div>
 
             <form id="orderForm" onsubmit="handleOrder(event)" class="space-y-4">
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-500 mb-1" id="input-label">Nomor HP / No. Tujuan</label>
-                    <input type="number" id="target_number" required placeholder="Contoh: 081234567890" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
+                    <input type="text" id="target_number" required placeholder="Contoh: 081234567890 / ID Game" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
                 </div>
 
                 <div>
@@ -168,21 +183,21 @@ header('Content-Type: text/html; charset=utf-8');
                             <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Pulsa</td>
-                            <td class="px-6 py-4">Pulsa Reguler 10.000</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 11.000</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-800">Paket Data</td>
-                            <td class="px-6 py-4">Paket Data 5 GB / 7 Hari</td>
-                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 22.000</td>
-                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
-                        </tr>
-                        <tr>
                             <td class="px-6 py-4 font-semibold text-slate-800">E-Wallet</td>
                             <td class="px-6 py-4">DANA Topup 20.000</td>
                             <td class="px-6 py-4 font-bold text-emerald-600">Rp 20.800</td>
+                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-slate-800">Voucher Game</td>
+                            <td class="px-6 py-4">Mobile Legends 86 Diamond</td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 21.500</td>
+                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-slate-800">Aktv. Perdana</td>
+                            <td class="px-6 py-4">Akt. Perdana Telkomsel</td>
+                            <td class="px-6 py-4 font-bold text-emerald-600">Rp 15.000</td>
                             <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">Tersedia</span></td>
                         </tr>
                         <tr>
@@ -221,20 +236,8 @@ header('Content-Type: text/html; charset=utf-8');
         </div>
     </section>
 
-    <!-- Section: Bantuan / Kontak -->
-    <section id="kontak" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-12">
-        <div class="bg-emerald-900 text-white rounded-2xl p-6 md:p-8 text-center flex flex-col items-center">
-            <i class="fa-solid fa-headset text-4xl text-amber-400 mb-3"></i>
-            <h3 class="text-2xl font-bold mb-2">Butuh Bantuan Kendala Transaksi?</h3>
-            <p class="text-emerald-200 text-sm max-w-lg mb-6">Tim Customer Service PT MC Berkah Ilahi 09 siap membantu transaksi Anda jika terjadi keterlambatan atau kesalahan pengisian.</p>
-            <a href="https://wa.me/6287790375321" target="_blank" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-xl transition shadow flex items-center gap-2 text-sm">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Chat CS (0877-9037-5321)
-            </a>
-        </div>
-    </section>
-
     <!-- Keunggulan Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 mb-12">
+    <section id="keunggulan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 mb-12">
         <h3 class="text-xl font-bold text-center text-slate-800 mb-8">Mengapa Memilih PT MC Berkah Ilahi 09?</h3>
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
@@ -261,6 +264,18 @@ header('Content-Type: text/html; charset=utf-8');
         </div>
     </section>
 
+    <!-- Section: Bantuan / Kontak -->
+    <section id="kontak" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-12">
+        <div class="bg-emerald-900 text-white rounded-2xl p-6 md:p-8 text-center flex flex-col items-center">
+            <i class="fa-solid fa-headset text-4xl text-amber-400 mb-3"></i>
+            <h3 class="text-2xl font-bold mb-2">Butuh Bantuan Kendala Transaksi?</h3>
+            <p class="text-emerald-200 text-sm max-w-lg mb-6">Tim Customer Service PT MC Berkah Ilahi 09 siap membantu transaksi Anda jika terjadi keterlambatan atau kesalahan pengisian.</p>
+            <a href="https://wa.me/6287790375321" target="_blank" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-xl transition shadow flex items-center gap-2 text-sm">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Chat CS (0877-9037-5321)
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="mt-auto bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:text-left">
@@ -276,30 +291,68 @@ header('Content-Type: text/html; charset=utf-8');
 
     <!-- JavaScript Dynamic Logic -->
     <script>
-        // Data Produk
+        // Data Produk Lengkap Sesuai Aplikasi
         const products = {
             pulsa: [
                 { name: "Pulsa Reguler 5.000", price: "Rp 6.000" },
                 { name: "Pulsa Reguler 10.000", price: "Rp 11.000" },
                 { name: "Pulsa Reguler 25.000", price: "Rp 25.800" },
                 { name: "Pulsa Reguler 50.000", price: "Rp 50.500" },
-                { name: "Pulsa Reguler 100.000", price: "Rp 99.000" }
-            ],
-            paket: [
+                { name: "Pulsa Reguler 100.000", price: "Rp 99.000" },
                 { name: "Paket Data 1 GB / 3 Hari", price: "Rp 8.000" },
-                { name: "Paket Data 5 GB / 7 Hari", price: "Rp 22.000" },
-                { name: "Paket Data Unlimited / 30 Hari", price: "Rp 65.000" }
+                { name: "Paket Data 5 GB / 7 Hari", price: "Rp 22.000" }
             ],
             ewallet: [
                 { name: "DANA Topup 20.000", price: "Rp 20.800" },
+                { name: "ShopeePay Topup 50.000", price: "Rp 50.800" },
+                { name: "Gojek/Gopay Topup 20.000", price: "Rp 20.800" },
+                { name: "Gojek Driver 50.000", price: "Rp 50.800" },
                 { name: "OVO Topup 50.000", price: "Rp 50.800" },
-                { name: "Gopay Topup 100.000", price: "Rp 100.800" },
-                { name: "ShopeePay Topup 50.000", price: "Rp 50.800" }
+                { name: "LinkAja Topup 25.000", price: "Rp 25.800" },
+                { name: "Grab Penumpang / Driver 50.000", price: "Rp 50.800" },
+                { name: "Maxim Topup 20.000", price: "Rp 21.000" },
+                { name: "AstraPay / Kaspro / iSaku 20.000", price: "Rp 20.800" },
+                { name: "Sakuku / TIX-ID / M-TIX 50.000", price: "Rp 51.000" }
+            ],
+            game: [
+                { name: "Free Fire - 140 Diamonds", price: "Rp 19.500" },
+                { name: "Mobile Legends - 86 Diamonds", price: "Rp 21.500" },
+                { name: "PUBG Mobile - 60 UC", price: "Rp 15.000" },
+                { name: "Call of Duty - 31 CP", price: "Rp 6.000" },
+                { name: "Garena Shell - 33 Shell", price: "Rp 10.500" },
+                { name: "Arena of Valor / Honor of Kings", price: "Rp 12.000" },
+                { name: "Roblox - Robux Voucher", price: "Rp 25.000" },
+                { name: "Steam Wallet Code IDR 50.000", price: "Rp 55.000" }
+            ],
+            perdana: [
+                { name: "Akt. Perdana Indosat IM3", price: "Rp 15.000" },
+                { name: "Akt. Perdana Smartfren", price: "Rp 12.000" },
+                { name: "Akt. Perdana Axis", price: "Rp 15.000" },
+                { name: "Akt. Perdana XL", price: "Rp 18.000" },
+                { name: "Akt. Perdana Telkomsel", price: "Rp 15.000" },
+                { name: "Akt. Perdana By.U", price: "Rp 15.000" },
+                { name: "Akt. Perdana Three (3)", price: "Rp 15.000" }
             ],
             pln: [
                 { name: "Token PLN 20.000", price: "Rp 20.500" },
                 { name: "Token PLN 50.000", price: "Rp 50.500" },
                 { name: "Token PLN 100.000", price: "Rp 100.500" }
+            ],
+            voucher_fisik: [
+                { name: "Voucher Data Telkomsel 1.5GB", price: "Rp 12.000" },
+                { name: "Voucher Data Indosat 2.5GB", price: "Rp 11.000" },
+                { name: "Voucher Data Axis AIGO 2GB", price: "Rp 10.000" },
+                { name: "Voucher Data Tri 3GB", price: "Rp 13.000" }
+            ],
+            nelpon: [
+                { name: "Paket Nelpon Telkomsel All Operator", price: "Rp 15.000" },
+                { name: "Paket SMS Indosat All Operator", price: "Rp 6.000" },
+                { name: "Paket Haji & Umroh 7 Hari", price: "Rp 150.000" }
+            ],
+            digital: [
+                { name: "Google Play Voucher Rp 20.000", price: "Rp 22.000" },
+                { name: "Voucher Wifi.ID 1 Hari", price: "Rp 6.000" },
+                { name: "Voucher Tiktok Coin Gift Card", price: "Rp 15.000" }
             ]
         };
 
@@ -319,19 +372,28 @@ header('Content-Type: text/html; charset=utf-8');
             
             // Reset state style tab
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.className = "tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition hover:bg-slate-100";
+                btn.className = "tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition hover:bg-slate-100";
             });
 
             // Set active style tab
             const activeTab = document.getElementById(`tab-${category}`);
-            activeTab.className = "tab-btn active bg-emerald-50 text-emerald-700 border-emerald-500 border-2 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition";
+            if (activeTab) {
+                activeTab.className = "tab-btn active bg-emerald-50 text-emerald-700 border-emerald-500 border-2 py-3 px-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition";
+            }
 
             // Update Label Input
             const label = document.getElementById('input-label');
+            const targetInput = document.getElementById('target_number');
+            
             if(category === 'pln') {
                 label.innerText = "Nomor Meter / ID Pelanggan PLN";
+                targetInput.placeholder = "Contoh: 14023849120";
+            } else if(category === 'game') {
+                label.innerText = "ID Game / User ID";
+                targetInput.placeholder = "Contoh: 12345678 (Zone ID)";
             } else {
                 label.innerText = "Nomor HP / No. Tujuan";
+                targetInput.placeholder = "Contoh: 081234567890";
             }
 
             renderProducts(category);
@@ -342,12 +404,14 @@ header('Content-Type: text/html; charset=utf-8');
             const select = document.getElementById('product_select');
             select.innerHTML = '';
             
-            products[category].forEach(item => {
-                const opt = document.createElement('option');
-                opt.value = `${item.name} (${item.price})`;
-                opt.innerText = `${item.name} - ${item.price}`;
-                select.appendChild(opt);
-            });
+            if(products[category]) {
+                products[category].forEach(item => {
+                    const opt = document.createElement('option');
+                    opt.value = `${item.name} (${item.price})`;
+                    opt.innerText = `${item.name} - ${item.price}`;
+                    select.appendChild(opt);
+                });
+            }
         }
 
         // Handle Form Order (Meneruskan ke WhatsApp CS)
@@ -360,7 +424,7 @@ header('Content-Type: text/html; charset=utf-8');
             const adminWA = "6287790375321"; // Nomor WhatsApp CS
             const message = `Halo Admin *PT. MC BERKAH ILAHI 09*, saya ingin melakukan pemesanan:%0A%0A` +
                             `• *Produk:* ${product}%0A` +
-                            `• *No. Tujuan:* ${number}%0A` +
+                            `• *No. Tujuan/ID:* ${number}%0A` +
                             `• *Metode Bayar:* ${payment}%0A%0A` +
                             `Mohon instruksi pembayaran lebih lanjut. Terima kasih!`;
 
