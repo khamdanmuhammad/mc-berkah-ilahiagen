@@ -1,9 +1,6 @@
 <?php
 // Set header untuk memastikan encoding UTF-8
 header('Content-Type: text/html; charset=utf-8');
-
-// Gambar Base64 PT MC Berkah Ilahi 09
-$logoBase64 = "https://i.ibb.co.co/v6W9J12s/MCberkahilahi09.jpg"; 
 ?>
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
