@@ -88,7 +88,7 @@ header('Content-Type: text/html; charset=utf-8');
                     <hr class="border-white/10 my-3">
                     <div class="text-xs text-emerald-100 space-y-2">
                         <div class="flex justify-between"><span>Status Server:</span> <span class="text-emerald-300 font-bold">ONLINE (99.9%)</span></div>
-                        <div class="flex justify-between"><span>Metode Pembayaran:</span> <span>QRIS, Transfer Bank, E-Wallet</span></div>
+                        <div class="flex justify-between"><span>Metode Pembayaran:</span> <span>SeaBank, QRIS, Bank, E-Wallet</span></div>
                     </div>
                 </div>
             </div>
@@ -132,9 +132,10 @@ header('Content-Type: text/html; charset=utf-8');
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-500 mb-1">Metode Pembayaran</label>
                     <select id="payment_method" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
-                        <option value="qris">QRIS (BCA, Mandiri, DANA, OVO, LinkAja)</option>
-                        <option value="bank">Transfer Bank (BCA / BRI / Mandiri)</option>
-                        <option value="wa">Konfirmasi Manual via WhatsApp</option>
+                        <option value="SeaBank (No. Rek: 901177614946)">SeaBank - 901177614946</option>
+                        <option value="QRIS">QRIS (BCA, Mandiri, DANA, OVO, LinkAja)</option>
+                        <option value="Transfer Bank Lain">Transfer Bank Lain (BCA / BRI / Mandiri)</option>
+                        <option value="Konfirmasi Manual via WA">Konfirmasi Manual via WhatsApp</option>
                     </select>
                 </div>
 
@@ -212,7 +213,7 @@ header('Content-Type: text/html; charset=utf-8');
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4">2</div>
                 <h4 class="font-bold text-slate-800 mb-2">Lakukan Pembayaran</h4>
-                <p class="text-xs text-slate-600">Pilih metode pembayaran sesuai kenyamanan Anda (QRIS, Bank, atau WA CS).</p>
+                <p class="text-xs text-slate-600">Transfer ke rekening <strong>SeaBank 901177614946</strong> atau metode lainnya.</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4">3</div>
@@ -362,7 +363,7 @@ header('Content-Type: text/html; charset=utf-8');
             const message = `Halo Admin *MC Berkah Ilahi Agen*, saya ingin melakukan pemesanan:%0A%0A` +
                             `• *Produk:* ${product}%0A` +
                             `• *No. Tujuan:* ${number}%0A` +
-                            `• *Metode Bayar:* ${payment.toUpperCase()}%0A%0A` +
+                            `• *Metode Bayar:* ${payment}%0A%0A` +
                             `Mohon instruksi pembayaran lebih lanjut. Terima kasih!`;
 
             window.open(`https://wa.me/${adminWA}?text=${message}`, '_blank');
