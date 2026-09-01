@@ -73,7 +73,7 @@ header('Content-Type: text/html; charset=utf-8');
             <div>
                 <span class="bg-emerald-600 text-emerald-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Lengkap & Ekonomis</span>
                 <h1 class="text-3xl md:text-5xl font-extrabold mt-3 leading-tight">Pengisian Produk Digital Instan & Terpercaya</h1>
-                <p class="mt-4 text-emerald-100 text-sm md:text-base">Pengisian E-Wallet, Paket Data GB All Operator, Voucher Google Play, Roblox, dan Game Cepat & Hemat.</p>
+                <p class="mt-4 text-emerald-100 text-sm md:text-base">Pengisian E-Wallet, Token PLN, Paket Data GB All Operator, Voucher Google Play, Roblox, dan Game Cepat & Hemat.</p>
                 <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
                     <a href="#layanan" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg transition text-sm">Transaksi Sekarang</a>
                 </div>
@@ -102,7 +102,10 @@ header('Content-Type: text/html; charset=utf-8');
 
             <!-- Tombol Kategori Spesifik (Per Brand / Per Layanan) -->
             <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 mb-6">
-                <button onclick="switchTab('dana')" id="tab-dana" class="tab-btn active bg-emerald-50 text-emerald-700 border-emerald-500 border-2 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition">
+                <button onclick="switchTab('pulsa')" id="tab-pulsa" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
+                    <i class="fa-solid fa-mobile-screen-button text-base"></i> Pulsa Regular
+                </button>
+                <button onclick="switchTab('dana')" id="tab-dana" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-wallet text-base"></i> DANA
                 </button>
                 <button onclick="switchTab('ovo')" id="tab-ovo" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
@@ -117,11 +120,8 @@ header('Content-Type: text/html; charset=utf-8');
                 <button onclick="switchTab('linkaja')" id="tab-linkaja" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-credit-card text-base"></i> LinkAja
                 </button>
-                <button onclick="switchTab('pulsa')" id="tab-pulsa" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-mobile-screen-button text-base"></i> Pulsa Regular
-                </button>
-                <button onclick="switchTab('pln')" id="tab-pln" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-bolt text-base"></i> Token PLN
+                <button onclick="switchTab('pln')" id="tab-pln" class="tab-btn active bg-emerald-50 text-emerald-700 border-emerald-500 border-2 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition">
+                    <i class="fa-solid fa-bolt text-base text-amber-500"></i> Token PLN
                 </button>
                 <button onclick="switchTab('telkomsel')" id="tab-telkomsel" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-signal text-base"></i> Telkomsel GB
@@ -154,10 +154,10 @@ header('Content-Type: text/html; charset=utf-8');
                     <i class="fa-brands fa-google-play text-base text-emerald-600"></i> Google Play
                 </button>
                 <button onclick="switchTab('ff')" id="tab-ff" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-fire text-base text-orange-500"></i> Free Fire
+                    <i class="fa-solid fa-fire text-base"></i> Free Fire
                 </button>
                 <button onclick="switchTab('mlbb')" id="tab-mlbb" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
-                    <i class="fa-solid fa-gamepad text-base text-blue-500"></i> MLBB
+                    <i class="fa-solid fa-gamepad text-base"></i> MLBB
                 </button>
                 <button onclick="switchTab('perdana')" id="tab-perdana" class="tab-btn bg-slate-50 text-slate-600 border border-slate-200 py-2.5 px-2 rounded-xl font-semibold text-xs flex flex-col items-center justify-center gap-1 transition hover:bg-slate-100">
                     <i class="fa-solid fa-box text-base"></i> Aktv. Perdana
@@ -166,8 +166,8 @@ header('Content-Type: text/html; charset=utf-8');
 
             <form id="orderForm" onsubmit="handleOrder(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1" id="input-label">Nomor HP / ID Akun</label>
-                    <input type="text" id="target_number" required placeholder="Contoh: 082226238706" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
+                    <label class="block text-xs font-bold uppercase text-slate-500 mb-1" id="input-label">Nomor ID Pelanggan / Nomor Meter PLN</label>
+                    <input type="text" id="target_number" required placeholder="Contoh: 14123456789 / 531234567890" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-slate-800 text-sm">
                 </div>
 
                 <div>
@@ -226,7 +226,7 @@ header('Content-Type: text/html; charset=utf-8');
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4">1</div>
                 <h4 class="font-bold text-slate-800 mb-2">Pilih Layanan</h4>
-                <p class="text-xs text-slate-600">Pilih e-wallet, paket GB, Roblox, atau Voucher Google Play yang ingin dibeli.</p>
+                <p class="text-xs text-slate-600">Pilih Token PLN, e-wallet, paket GB, Roblox, atau Voucher Google Play yang ingin dibeli.</p>
             </div>
             <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm text-center">
                 <div class="w-10 h-10 bg-emerald-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4">2</div>
@@ -262,7 +262,7 @@ header('Content-Type: text/html; charset=utf-8');
                     <i class="fa-solid fa-bolt"></i>
                 </div>
                 <h4 class="font-bold text-slate-800 text-base mb-1">Proses Super Cepat</h4>
-                <p class="text-xs text-slate-600 leading-relaxed">Sistem terintegrasi memastikan pulsa, kuota, atau top up game masuk secara kilat setelah pembayaran dikonfirmasi.</p>
+                <p class="text-xs text-slate-600 leading-relaxed">Sistem terintegrasi memastikan pulsa, kuota, token PLN, atau top up game masuk secara kilat setelah pembayaran dikonfirmasi.</p>
             </div>
             <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
                 <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4">
@@ -322,6 +322,12 @@ header('Content-Type: text/html; charset=utf-8');
 
     <script>
         const productsData = {
+            pln: [
+                { code: "PLN20", name: "Token PLN 20.000", pasaran: "Rp 23.000", price: 21500 },
+                { code: "PLN50", name: "Token PLN 50.000", pasaran: "Rp 53.000", price: 51500 },
+                { code: "PLN100", name: "Token PLN 100.000", pasaran: "Rp 103.000", price: 101500 },
+                { code: "PLN150", name: "Token PLN 150.000 (Maksimal)", pasaran: "Rp 153.000", price: 151500 }
+            ],
             dana: [
                 { code: "DNBA10", name: "Saldo DANA 10.000", pasaran: "Rp 13.000", price: 11500 },
                 { code: "DNBA20", name: "Saldo DANA 20.000", pasaran: "Rp 23.000", price: 21500 }
@@ -341,9 +347,6 @@ header('Content-Type: text/html; charset=utf-8');
             ],
             linkaja: [
                 { code: "LA10", name: "Saldo LinkAja 10.000", pasaran: "Rp 13.000", price: 11500 }
-            ],
-            pln: [
-                { code: "PLN20", name: "Token PLN 20.000", pasaran: "Rp 23.000", price: 21500 }
             ],
             telkomsel: [
                 { code: "SBH2", name: "Telkomsel Data 2.5 GB 5 Hari", pasaran: "Rp 16.000", price: 13400 },
@@ -412,91 +415,90 @@ header('Content-Type: text/html; charset=utf-8');
                 { code: "ML85", name: "Mobile Legends 85 Diamonds", pasaran: "Rp 25.000", price: 22000 }
             ],
             perdana: [
-                { code: "ACT1", name: "Aktivasi Perdana Internet 3 GB", pasaran: "Rp 18.000", price: 15000 }
+                { code: "PERDANA1", name: "Aktivasi Kartu Perdana Simpati", pasaran: "Rp 15.000", price: 12000 }
             ]
         };
 
-        let currentTab = 'dana';
+        let currentCategory = 'pln';
 
         function formatRupiah(number) {
-            return 'Rp ' + number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
         }
 
-        function renderProducts(tabKey) {
-            const selectEl = document.getElementById('product_select');
-            selectEl.innerHTML = '';
-            const items = productsData[tabKey] || [];
-            
-            items.forEach(item => {
-                const opt = document.createElement('option');
-                opt.value = JSON.stringify(item);
-                opt.textContent = `${item.name} - ${formatRupiah(item.price)}`;
-                selectEl.appendChild(opt);
-            });
+        function switchTab(category) {
+            currentCategory = category;
 
-            renderPriceTable(tabKey);
-            updateInputLabel(tabKey);
-        }
-
-        function updateInputLabel(tabKey) {
-            const labelEl = document.getElementById('input-label');
-            const inputEl = document.getElementById('target_number');
-            
-            if (tabKey === 'roblox') {
-                labelEl.textContent = 'Username Roblox / Email';
-                inputEl.placeholder = 'Masukkan Username Roblox / Email';
-            } else if (tabKey === 'ff' || tabKey === 'mlbb') {
-                labelEl.textContent = 'ID Game / Zone ID';
-                inputEl.placeholder = 'Contoh: 12345678 (1234)';
-            } else if (tabKey === 'googleplay') {
-                labelEl.textContent = 'Nomor WhatsApp Penerima Voucher';
-                inputEl.placeholder = 'Contoh: 082226238706';
-            } else if (tabKey === 'pln') {
-                labelEl.textContent = 'Nomor Meter / ID Pelanggan PLN';
-                inputEl.placeholder = 'Masukkan Nomor Meter PLN';
-            } else {
-                labelEl.textContent = 'Nomor HP Tujuan / E-Wallet';
-                inputEl.placeholder = 'Contoh: 082226238706';
-            }
-        }
-
-        function renderPriceTable(tabKey) {
-            const tbody = document.getElementById('price-table-body');
-            tbody.innerHTML = '';
-            const items = productsData[tabKey] || [];
-
-            if (items.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="3" class="px-6 py-4 text-center text-slate-400">Tidak ada data harga.</td></tr>`;
-                return;
-            }
-
-            items.forEach(item => {
-                const tr = document.createElement('tr');
-                tr.className = 'hover:bg-slate-50 transition';
-                tr.innerHTML = `
-                    <td class="px-6 py-4 font-medium text-slate-900">${item.name}</td>
-                    <td class="px-6 py-4 text-slate-400 line-through">${item.pasaran}</td>
-                    <td class="px-6 py-4 font-bold text-emerald-600">${formatRupiah(item.price)}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-        }
-
-        function switchTab(tabKey) {
-            currentTab = tabKey;
-            
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-500', 'border-2');
                 btn.classList.add('bg-slate-50', 'text-slate-600', 'border-slate-200');
             });
 
-            const activeBtn = document.getElementById(`tab-${tabKey}`);
+            const activeBtn = document.getElementById(`tab-${category}`);
             if (activeBtn) {
                 activeBtn.classList.remove('bg-slate-50', 'text-slate-600', 'border-slate-200');
                 activeBtn.classList.add('active', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-500', 'border-2');
             }
 
-            renderProducts(tabKey);
+            const labelEl = document.getElementById('input-label');
+            const targetInput = document.getElementById('target_number');
+
+            if (category === 'pln') {
+                labelEl.innerText = "Nomor ID Pelanggan / Nomor Meter PLN";
+                targetInput.placeholder = "Contoh: 14123456789 / 531234567890";
+            } else if (category === 'roblox') {
+                labelEl.innerText = "Username Roblox / Email";
+                targetInput.placeholder = "Contoh: UserRoblox123";
+            } else if (category === 'googleplay') {
+                labelEl.innerText = "Nomor WA / Email Penerima";
+                targetInput.placeholder = "Contoh: 082226238706 / email@gmail.com";
+            } else if (category === 'ff' || category === 'mlbb') {
+                labelEl.innerText = "ID Game / User ID & Zone ID";
+                targetInput.placeholder = "Contoh: 12345678 (1234)";
+            } else {
+                labelEl.innerText = "Nomor HP / Nomor Tujuan";
+                targetInput.placeholder = "Contoh: 082226238706";
+            }
+
+            renderProducts();
+            renderPriceTable();
+        }
+
+        function renderProducts() {
+            const selectEl = document.getElementById('product_select');
+            selectEl.innerHTML = '';
+
+            const list = productsData[currentCategory] || [];
+            if (list.length === 0) {
+                const opt = document.createElement('option');
+                opt.value = "";
+                opt.innerText = "-- Produk Belum Tersedia --";
+                selectEl.appendChild(opt);
+                return;
+            }
+
+            list.forEach(item => {
+                const opt = document.createElement('option');
+                opt.value = item.code;
+                opt.innerText = `${item.name} - ${formatRupiah(item.price)} (Pasaran: ${item.pasaran})`;
+                selectEl.appendChild(opt);
+            });
+        }
+
+        function renderPriceTable() {
+            const tbody = document.getElementById('price-table-body');
+            tbody.innerHTML = '';
+
+            const list = productsData[currentCategory] || [];
+            list.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition";
+                tr.innerHTML = `
+                    <td class="px-6 py-4 font-medium text-slate-800">${item.name}</td>
+                    <td class="px-6 py-4 text-slate-400 line-through">${item.pasaran}</td>
+                    <td class="px-6 py-4 font-bold text-emerald-600">${formatRupiah(item.price)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
         }
 
         function toggleMobileMenu() {
@@ -506,33 +508,25 @@ header('Content-Type: text/html; charset=utf-8');
 
         function handleOrder(e) {
             e.preventDefault();
-            const targetNumber = document.getElementById('target_number').value.trim();
-            const productSelectVal = document.getElementById('product_select').value;
-            const paymentMethod = document.getElementById('payment_method').value;
+            const target = document.getElementById('target_number').value;
+            const productCode = document.getElementById('product_select').value;
+            const payment = document.getElementById('payment_method').value;
 
-            if (!targetNumber || !productSelectVal) {
-                alert('Silakan lengkapi nomor tujuan dan pilihan produk!');
-                return;
-            }
+            const list = productsData[currentCategory] || [];
+            const selectedProduct = list.find(p => p.code === productCode);
 
-            const product = JSON.parse(productSelectVal);
+            const productName = selectedProduct ? selectedProduct.name : productCode;
+            const productPrice = selectedProduct ? formatRupiah(selectedProduct.price) : '-';
+
+            const text = `Halo Admin MC BERKAH ILAHI 09 agen,\n\nSaya mau order:\n- Produk: *${productName}*\n- Tujuan/ID: *${target}*\n- Harga: *${productPrice}*\n- Pembayaran: *${payment}*\n\nMohon segara diproses. Terima kasih!`;
             
-            const adminWA = "6287790375321";
-            let text = `*FORM ORDER - MC BERKAH ILAHI 09 AGEN*\n\n`;
-            text += `• *Produk:* ${product.name}\n`;
-            text += `• *Kode:* ${product.code}\n`;
-            text += `• *Tujuan:* ${targetNumber}\n`;
-            text += `• *Total Harga:* ${formatRupiah(product.price)}\n`;
-            text += `• *Pembayaran:* ${paymentMethod}\n\n`;
-            text += `Mohon segera diproses ya min, terima kasih!`;
-
-            const encodedText = encodeURIComponent(text);
-            window.open(`https://wa.me/${adminWA}?text=${encodedText}`, '_blank');
+            const waUrl = `https://wa.me/6287790375321?text=${encodeURIComponent(text)}`;
+            window.open(waUrl, '_blank');
         }
 
-        // Inisialisasi tampilan awal
+        // Inisialisasi awal saat halaman dimuat
         document.addEventListener('DOMContentLoaded', () => {
-            renderProducts('dana');
+            switchTab('pln');
         });
     </script>
 </body>
